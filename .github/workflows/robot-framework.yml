@@ -23,7 +23,8 @@ jobs:
           python -m pip install --upgrade pip
           pip install robotframework
           pip install robotframework-seleniumlibrary
-          pip install robotframework robotframework-seleniumlibrary && npm install chromedriver
+          pip install webdrivermanager
+          webdrivermanager firefox chrome --linkpath /usr/local/bin
    
       - name: Test with RobotFramework
         run: robot .  
