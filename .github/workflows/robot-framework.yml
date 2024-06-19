@@ -12,28 +12,24 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-
-      - name: Setup Web Application
-        run: docker run -d -p 8000:8000 vncrtech/puppybank
-
-      - name: Setup Python
-        uses: actions/setup-python@v5.0.0
+      - uses: actions/checkout@v3
+      - name: Set up Python 3.12.1
+        uses: actions/setup-python@v3
         with:
-          python-version: 3.12.2
-
-      - name: Setup Workspace
+          python-version: 3.12.1
+   
+      - name: Install dependencies
         run: |
-          python -m venv .venv
-          source .venv/bin/activate
-          pip install --upgrade robotframework-seleniumlibrary
-
-      - name: Run Tests
-        run: $GITHUB_WORKSPACE/.venv/bin/python3.12 -m robot.run --suite test-automation-101-rf.tests.smoke.login --outputdir $GITHUB_WORKSPACE/results .
-
-      - name: Upload Test Report
-        uses: actions/upload-artifact@v4.3.1
+          python -m pip install --upgrade pip
+          pip install robotframework
+          pip install robotframework-seleniumlibrary
+   
+      - name: Test with RobotFramework
+        run: robot .  
+         
+      - name: Test Report Generation
+        uses: actions/upload-artifact@v4
+        if: success() || failure()
         with:
-          name: rf-results
-          path: results/
+          name: Report                # Name of the folder
+          path: report.html           # Path to test results
