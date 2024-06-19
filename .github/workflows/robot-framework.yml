@@ -15,5 +15,5 @@ jobs:
       with:
         image: kietara/robot-framework
         image_version: 1.0
-        tests_dir: '${{ github.workspace }}/tests/robot'
-        reports_dir: '${{ github.workspace }}/tests/robot/reports'
+        tests_dir: '${{ github.workspace }}/'
+        reports_dir: '${{ github.workspace }}/reports'
