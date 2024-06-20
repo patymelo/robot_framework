@@ -83,13 +83,13 @@ jobs:
       if: always()
       with:
          name: test-reports
-         path: ./build/reports/tests
+         path: ${{ github.workspace }}
     - name: Upload test results
       uses: actions/upload-artifact@v3
       if: always()
       with:
         name: test-results
-        path: ./build/test-results
+        path: ${{ github.workspace }}
     #- name: Run tests with ${{ matrix.browser }} if CPython
       #if: startsWith( matrix.python-version, 'pypy') == false
       #run: |
