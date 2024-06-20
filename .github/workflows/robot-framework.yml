@@ -99,17 +99,17 @@ jobs:
       uses: actions/upload-artifact@v1
       if: always()
       with:
-        name: reports
+        name: report
         path: report
    generate_report:
     if: always()
     needs: [test] 
     runs-on: ubuntu-latest
     steps:
-    - name: Download reports
+    - name: Download report
       uses: actions/download-artifact@v1
       with:
-        name: reports
+        name: report
     - name: Get Repository Owner & Name
       run: |
         export OWNER="$(echo "${{ github.repository }}" | awk -F / '{print $1}' | sed -e "s/:refs//")"
