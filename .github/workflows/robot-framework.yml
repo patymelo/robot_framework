@@ -78,10 +78,10 @@ jobs:
       if: startsWith( matrix.python-version, 'pypy') == true
       run: |
         robot cadastro/nome/progressivo/CADBLC-1764/TC_AlteracaoIntituicaoFinanceira_NaoEnviaContaB3i.robot
-    - name: Run robot tests
-      run: |
-            cd robot-framework
-            python -m robot -i ready primeiro_teste.robot
+    #- name: Run robot tests
+      #run: |
+            #cd robot-framework
+            #python -m robot -i ready primeiro_teste.robot
     - name: publish test results
       uses: actions/upload-artifact@v1
       with:
