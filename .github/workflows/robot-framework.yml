@@ -79,15 +79,8 @@ jobs:
          if: startsWith( matrix.python-version, 'pypy') == false
          run: |
           robot  .      
-       - name: Upload test results
-         uses: actions/upload-artifact@v1
-         if: always()
-         with:
-          name: reports
-          path: ${{ github.workspace }}/report
        - uses: actions/upload-artifact@v1
          if: failure()
          with:
           name: SeleniumLibrary Test results
           path: ${{ github.workspace }}/report
-       
