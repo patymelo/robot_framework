@@ -77,7 +77,7 @@ jobs:
     - name: Run tests with headless Chrome and with PyPy
       if: startsWith( matrix.python-version, 'pypy') == true
       run: |
-        robot cadastro/nome/progressivo/CADBLC-1764/TC_AlteracaoIntituicaoFinanceira_NaoEnviaContaB3i.robot
+        robot ./cadastro/nome/progressivo/CADBLC-1764/TC_AlteracaoIntituicaoFinanceira_NaoEnviaContaB3i.robot
     #- name: Run robot tests
       #run: |
             #cd robot-framework
@@ -86,6 +86,6 @@ jobs:
       uses: actions/upload-artifact@v1
       with:
           name: report
-          path: ${{ github.repository }}  
+          path: ./cadastro/nome/progressivo/CADBLC-1764/outut.html
    
  
