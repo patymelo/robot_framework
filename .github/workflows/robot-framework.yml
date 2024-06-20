@@ -112,19 +112,7 @@ jobs:
             if: failure()
             with:
               name: SeleniumLibrary Test results
-              path: primeiro_teste.robot
-   test:
-        runs-on: ubuntu-latest
-        steps:
-        - uses: actions/checkout@v2
-        - name: Execute tests
-          uses: joonvena/robotframework-docker-action@v1.0
-        - name: Upload test results
-          uses: actions/upload-artifact@v1
-          if: always()
-          with:
-            name: reports
-            path: reports
+              path: ${{ github.workspace }}/report
    generate_report:
         if: always()
         needs: [test] 
