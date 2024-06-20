@@ -87,19 +87,20 @@ jobs:
    test:
     runs-on: ubuntu-latest
     steps:
+    - name: Publish Test Summary Results
+      run: npx github-actions-ctrf ctrf/ctrf-report.json
     - uses: actions/checkout@v2
     - name: Execute tests
       uses: joonvena/robotframework-docker-action@v0.1
       env:
-        BROWSER: chrome
-        ROBOT_TESTS_DIR: ${{ github.workspace }}
-        ROBOT_REPORTS_DIR: ${{ github.workspace }}/report
+        ROBOT_TESTS_DIR: /
+        ROBOT_REPORTS_DIR: report
     - name: Upload test results
       uses: actions/upload-artifact@v1
       if: always()
       with:
         name: reports
-        path: ${{ github.workspace }}/report
+        path: report
    generate_report:
     if: always()
     needs: [test] 
