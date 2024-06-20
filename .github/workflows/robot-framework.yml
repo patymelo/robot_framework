@@ -80,7 +80,7 @@ jobs:
     - name: Run tests with ${{ matrix.browser }} if CPython
       if: startsWith( matrix.python-version, 'pypy') == false
       run: |
-        robot . 
+        robot .  -d report
     - name: Test Report Generation
       uses: actions/upload-artifact@v4
       if: success() || failure()
