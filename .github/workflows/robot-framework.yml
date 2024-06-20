@@ -74,22 +74,22 @@ jobs:
         echo "WEBDRIVERPATH=$($SELENIUM_MANAGER_EXE --browser chrome --debug | awk '/INFO[[:space:]]Driver path:/ {print $NF;exit}')" >> "$GITHUB_ENV"
         echo "$WEBDRIVERPATH"
     # Temporarily ignoring pypy execution
-    - name: Run tests with headless Chrome and with PyPy
-      if: startsWith( matrix.python-version, 'pypy') == true
-      run: |
-        robot ./cadastro/nome/progressivo/CADBLC-1764/TC_AlteracaoIntituicaoFinanceira_NaoEnviaContaB3i.robot
-    - name: Run tests with headless Chrome and with PyPy
-      if: startsWith( matrix.python-version, 'pypy') == true
-      run: |   
-        robot ./cadastro/nome/progressivo/CADBLC-1764/TC_AlteracaoIntituicaoFinanceira_NaoEnviaContaB3i.robot
-    #- name: Run robot tests
+    #- name: Run tests with headless Chrome and with PyPy
+      #if: startsWith( matrix.python-version, 'pypy') == true
       #run: |
-            #cd robot-framework
-            #python -m robot -i ready primeiro_teste.robot
-    - name: publish test results
-      uses: actions/upload-artifact@v1
-      with:
-          name: report
-          path: ./cadastro/nome/progressivo/CADBLC-1764/outut.html
+        #robot ./cadastro/nome/progressivo/CADBLC-1764/TC_AlteracaoIntituicaoFinanceira_NaoEnviaContaB3i.robot
+    #- name: Run tests with headless Chrome and with PyPy
+      #if: startsWith( matrix.python-version, 'pypy') == true
+      #run: |   
+        #robot ./cadastro/nome/progressivo/CADBLC-1764/TC_AlteracaoIntituicaoFinanceira_NaoEnviaContaB3i.robot
+    - name: Run robot tests
+      run: |
+            cd ./cadastro/nome/progressivo/CADBLC-1764/
+            python -m robot -i ready TC_AlteracaoIntituicaoFinanceira_NaoEnviaContaB3i.robot
+    #- name: publish test results
+      #uses: actions/upload-artifact@v1
+      #with:
+          #name: report
+          #path: ./cadastro/nome/progressivo/CADBLC-1764/outut.html
    
  
