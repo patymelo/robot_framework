@@ -78,12 +78,18 @@ jobs:
       if: startsWith( matrix.python-version, 'pypy') == true
       run: |
         robot primeiro_teste.robot
-    - name: Upload test reports
-      uses: actions/upload-artifact@v3
-      if: always()
+    - name: Download all workflow run artifacts
+      uses: actions/download-artifact@v4
+    - name: publish test results
+      uses: actions/upload-artifact@v1
       with:
-         name: reports
-         path: ${{ github.workspace }}
+         name: report
+         path: ${{ github.workspace }}/report.html  
+    - name: publish test output results
+      uses: actions/upload-artifact@v1
+      with:
+         name: report
+         path: ${{ github.workspace }}/output.html      
     - name: Upload test results
       uses: actions/upload-artifact@v3
       if: always()
@@ -101,16 +107,4 @@ jobs:
        #name: Pytest Report           # Name of the folder
        #path: /report           # Path to test results
 
-   generate_report:
-        runs-on: ubuntu-latest
-        steps:
-        - uses: actions/checkout@v2
-        - name: Download reports
-          uses: actions/download-artifact@v1
-          with:
-            name: reports
-            report_path: ${{ github.workspace }}
-        - name: Send report to commit
-          uses: joonvena/robotframework-reporter-action@v2
-          with:
-            gh_access_token: ${{ secrets.GITHUB_TOKEN }}
+ 
