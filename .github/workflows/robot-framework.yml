@@ -54,9 +54,6 @@ jobs:
     - name: Install Seleninum v${{ matrix.selenium-version }}
       run: |
         pip install --upgrade selenium==${{ matrix.selenium-version }}
-    - name: Install RF ${{ matrix.rf-version }}
-      run: |
-        pip install -U --pre robotframework==${{ matrix.rf-version }}
     - name: Install drivers via selenium-manager
       run: |
         if [[ ${{ matrix.selenium-version }} == '4.20.0' || ${{ matrix.selenium-version }} == '4.21.0' ]]; then
