@@ -1,10 +1,10 @@
 name: Robot Framework CI2
 
 on:
-   push:
-    branches: [ "main" ]
-   pull_request:
-    branches: [ "main" ]
+   #push:
+    #branches: [ "main" ]
+   #pull_request:
+    #branches: [ "main" ]
    workflow_dispatch:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
@@ -33,4 +33,11 @@ jobs:
       
       - name: Run tests
         run: |
-                 robot  .
+           robot  .
+      - name: Upload test results
+        uses: actions/upload-artifact@v1
+        if: always()
+        with:
+           name: reports
+           path: ${{ github.workspace }}/reports
+
