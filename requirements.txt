@@ -10,6 +10,6 @@ robotframework-requests >= 0.9.6
 robotframework-jsonlibrary
 PyYAML
 robotframework-databaselibrary
-pip install oracledb
+oracledb
 robotframework-archivelibrary
 unicode
