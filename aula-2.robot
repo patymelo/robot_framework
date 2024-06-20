@@ -25,7 +25,14 @@ Verificar se ao preencher corretamente o formulário os dados são inseridos cor
 *** Keywords ***
 
 Dado que eu acesse o Organo
-    Open Browser    url=http://localhost:3000/    browser=Chrome
+     Launch URL
+     ${chrome_options}=  Evaluate  sys.modules['selenium.webdriver'].ChromeOptions()  sys, selenium.webdriver
+     Call Method    ${chrome_options}    add_argument    --no-sandbox
+     Call Method    ${chrome_options}    add_argument    --disable-extensions
+     Call Method    ${chrome_options}    add_argument    --headless
+     Call Method    ${chrome_options}    add_argument    --disable-gpu
+     Create Webdriver    Chrome    chrome_options=${chrome_options}
+     Go To    ${URL}
 E preencha os campos do formulário
     Input Text       id:form-nome       Akemi
     Input Text       id:form-cargo      Desenvolvedora 
