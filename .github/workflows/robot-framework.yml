@@ -85,7 +85,7 @@ jobs:
     - name: Run robot tests
       run: |
             cd ./cadastro/nome/progressivo/CADBLC-1764/
-            python -m robot -i ready TC_AlteracaoIntituicaoFinanceira_NaoEnviaContaB3i.robot
+            python -m robot -i PROGRESSIVO_FILA_EVENTO_PARTICIPANTE_NAO_GERA_EVENTO TC_AlteracaoIntituicaoFinanceira_NaoEnviaContaB3i.robot
     #- name: publish test results
       #uses: actions/upload-artifact@v1
       #with:
