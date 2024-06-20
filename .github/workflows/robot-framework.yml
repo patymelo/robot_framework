@@ -81,20 +81,14 @@ jobs:
     - name: Run tests with headless Chrome and with PyPy
       if: startsWith( matrix.python-version, 'pypy') == true
       run: |
-        xvfb-run --auto-servernum python atest/run.py --nounit --zip headlesschrome
+        xvfb-run --auto-servernum python primeiro_teste.robot --nounit --zip headlesschrome
     - name: Run tests with ${{ matrix.browser }} if CPython
       if: startsWith( matrix.python-version, 'pypy') == false
       run: |
-        xvfb-run --auto-servernum python atest/run.py --zip ${{ matrix.browser }}
-    # - name: Run tests with Selenium Grid
-    #   if: matrix.python-version == '3.11' && matrix.rf-version == '3.2.2' && matrix.python-version != 'pypy-3.9'
-    #   run: |
-    #     wget --no-verbose --output-document=./selenium-server-standalone.jar http://selenium-release.storage.googleapis.com/3.141/selenium-server-standalone-3.141.59.jar
-    #     sudo chmod u+x ./selenium-server-standalone.jar
-    #     xvfb-run --auto-servernum python atest/run.py --zip headlesschrome  --grid True
+        xvfb-run --auto-servernum python primeiro_teste.robot --zip ${{ matrix.browser }}
 
     - uses: actions/upload-artifact@v1
       if: failure()
       with:
         name: SeleniumLibrary Test results
-        path: atest/zip_results
+        path: /
