@@ -82,14 +82,14 @@ jobs:
       uses: actions/upload-artifact@v3
       if: always()
       with:
-         name: test-reports
-         path: ${{ github.workspace }}/*.html
+         name: reports
+         path: ${{ github.workspace }}
     - name: Upload test results
       uses: actions/upload-artifact@v3
       if: always()
       with:
-        name: test-results
-        path: ${{ github.workspace }}/*.html
+        name: results
+        path: ${{ github.workspace }}
     #- name: Run tests with ${{ matrix.browser }} if CPython
       #if: startsWith( matrix.python-version, 'pypy') == false
       #run: |
@@ -100,3 +100,16 @@ jobs:
       #with:
        #name: Pytest Report           # Name of the folder
        #path: /report           # Path to test results
+
+   generate_report:
+        runs-on: ubuntu-latest
+        steps:
+        - uses: actions/checkout@v2
+        - name: Download reports
+          uses: actions/download-artifact@v1
+          with:
+            name: reports
+        - name: Send report to commit
+          uses: joonvena/robotframework-reporter-action@v2
+          with:
+            gh_access_token: ${{ secrets.GITHUB_TOKEN }}
