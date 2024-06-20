@@ -73,10 +73,10 @@ jobs:
         echo "$SELENIUM_MANAGER_EXE"
         echo "WEBDRIVERPATH=$($SELENIUM_MANAGER_EXE --browser chrome --debug | awk '/INFO[[:space:]]Driver path:/ {print $NF;exit}')" >> "$GITHUB_ENV"
         echo "$WEBDRIVERPATH"
-    - name: Generate stub file for ${{ matrix.python-version }}
-      if: matrix.python-version != 'pypy-3.9'
-      run: |
-        invoke gen-stub
+    #- name: Generate stub file for ${{ matrix.python-version }}
+      #if: matrix.python-version != 'pypy-3.9'
+      #run: |
+        #invoke gen-stub
     # Temporarily ignoring pypy execution
     - name: Run tests with headless Chrome and with PyPy
       if: startsWith( matrix.python-version, 'pypy') == true
