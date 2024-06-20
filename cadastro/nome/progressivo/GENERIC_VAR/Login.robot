@@ -60,7 +60,7 @@ O usuario possui acesso ao NoMe como RIOBM
 O usuario possui acesso ao NoMe como CETIP
     Define URL
     Open Browser    ${URL}  ${BROWSER}
-    ...   options=add_argument("--disable-popup-blocking");add_argument("--disable-web-security");add_argument("--start-maximized");add_argument("--ignore-certificate-errors");add_experimental_option("excludeSwitches", ["enable-logging"]);add_experimental_option("useAutomationExtension", False)
+    ...   options=add_argument("--headless");add_argument("--disable-web-security");add_argument("--start-maximized");add_argument("--ignore-certificate-errors");add_experimental_option("excludeSwitches", ["enable-logging"]);add_experimental_option("useAutomationExtension", False)
     Set Browser Implicit Wait       15s
     Maximize Browser Window
 
