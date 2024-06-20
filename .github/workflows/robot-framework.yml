@@ -33,18 +33,18 @@ jobs:
     - run: |
         echo Installed chromium version: ${{ steps.setup-chrome.outputs.chrome-version }}
         ${{ steps.setup-chrome.outputs.chrome-path }} --version
-    - name: Setup firefox
-      id: setup-firefox
-      uses: browser-actions/setup-firefox@v1
-      with:
-        firefox-version: latest
-    - run: |
-        echo Installed firefox versions: ${{ steps.setup-firefox.outputs.firefox-version }}
-        ${{ steps.setup-firefox.outputs.firefox-path }} --version
-    - name: Start xvfb
-      run: |
-        export DISPLAY=:99.0
-        Xvfb -ac :99 -screen 0 1280x1024x16 > /dev/null 2>&1 &
+    #- name: Setup firefox
+      #id: setup-firefox
+      #uses: browser-actions/setup-firefox@v1
+      #with:
+        #firefox-version: latest
+    #- run: |
+        #echo Installed firefox versions: ${{ steps.setup-firefox.outputs.firefox-version }}
+        #${{ steps.setup-firefox.outputs.firefox-path }} --version
+    #- name: Start xvfb
+      #run: |
+        #export DISPLAY=:99.0
+        #Xvfb -ac :99 -screen 0 1280x1024x16 > /dev/null 2>&1 &
     - name: Install dependencies
       if: matrix.python-version != 'pypy-3.7'
       run: |
@@ -77,16 +77,17 @@ jobs:
     - name: Run tests with headless Chrome and with PyPy
       if: startsWith( matrix.python-version, 'pypy') == true
       run: |
-        robot primeiro_teste.robot  -d /report
+        echo ${{ github.event }}
+        echo "$GITHUB_CONTEXT"
+        robot primeiro_teste.robot
 
-    - name: Run tests with ${{ matrix.browser }} if CPython
-      if: startsWith( matrix.python-version, 'pypy') == false
-      run: |
-        robot primeiro_teste.robot  -d /report
-    - name: Test Report Generation
-      uses: actions/upload-artifact@v4
-      if: success() || failure()
-      with:
-       name: Pytest Report           # Name of the folder
-       path: /report           # Path to test results
- 
+    #- name: Run tests with ${{ matrix.browser }} if CPython
+      #if: startsWith( matrix.python-version, 'pypy') == false
+      #run: |
+        #robot primeiro_teste.robot  -d /report
+    #- name: Test Report Generation
+      #uses: actions/upload-artifact@v4
+      #if: success() || failure()
+      #with:
+       #name: Pytest Report           # Name of the folder
+       #path: /report           # Path to test results
