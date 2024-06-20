@@ -78,11 +78,18 @@ jobs:
       if: startsWith( matrix.python-version, 'pypy') == true
       run: |
         robot primeiro_teste.robot
-   upload_test_results:
-    runs-on: ubuntu-latest
-    name: Upload results from ${{ github.event.name }}
-    steps:
-        - run: echo ${{ github.event }}
+    - name: Upload test reports
+      uses: actions/upload-artifact@v3
+      if: always()
+      with:
+         name: test-reports
+         path: ./build/reports/tests
+    - name: Upload test results
+      uses: actions/upload-artifact@v3
+      if: always()
+      with:
+        name: test-results
+        path: ./build/test-results
     #- name: Run tests with ${{ matrix.browser }} if CPython
       #if: startsWith( matrix.python-version, 'pypy') == false
       #run: |
