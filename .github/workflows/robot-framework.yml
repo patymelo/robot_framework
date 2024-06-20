@@ -19,6 +19,7 @@ jobs:
         #browser: [firefox, chrome, headlesschrome]  #edge
         browser: [chrome]  #edge
     steps:
+    - run: echo ${{ github.event }}
     - uses: actions/checkout@v4
     - name: Set up Python ${{ matrix.python-version }} with Robot Framework ${{ matrix.rf-version }}
       uses: actions/setup-python@v5
@@ -76,16 +77,16 @@ jobs:
     - name: Run tests with headless Chrome and with PyPy
       if: startsWith( matrix.python-version, 'pypy') == true
       run: |
-        robot .  -d report
+        robot primeiro_teste.robot  -d /report
 
     - name: Run tests with ${{ matrix.browser }} if CPython
       if: startsWith( matrix.python-version, 'pypy') == false
       run: |
-        robot .  -d report
+        robot primeiro_teste.robot  -d /report
     - name: Test Report Generation
       uses: actions/upload-artifact@v4
       if: success() || failure()
       with:
        name: Pytest Report           # Name of the folder
-       path: report           # Path to test results
+       path: /report           # Path to test results
  
