@@ -78,33 +78,14 @@ jobs:
       if: startsWith( matrix.python-version, 'pypy') == true
       run: |
         robot primeiro_teste.robot
-    - name: Download all workflow run artifacts
-      uses: actions/download-artifact@v4
+    - name: Run robot tests
+      run: |
+            cd robot-framework
+            python -m robot -i ready primeiro_teste.robot
     - name: publish test results
       uses: actions/upload-artifact@v1
       with:
-         name: report
-         path: ${{ github.workspace }}/report.html  
-    - name: publish test output results
-      uses: actions/upload-artifact@v1
-      with:
-         name: report
-         path: ${{ github.workspace }}/output.html      
-    - name: Upload test results
-      uses: actions/upload-artifact@v3
-      if: always()
-      with:
-        name: results
-        path: ${{ github.workspace }}
-    #- name: Run tests with ${{ matrix.browser }} if CPython
-      #if: startsWith( matrix.python-version, 'pypy') == false
-      #run: |
-        #robot primeiro_teste.robot  -d /report
-    #- name: Test Report Generation
-      #uses: actions/upload-artifact@v4
-      #if: success() || failure()
-      #with:
-       #name: Pytest Report           # Name of the folder
-       #path: /report           # Path to test results
-
+          name: report
+          path: report.html    
+   
  
