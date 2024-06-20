@@ -84,6 +84,11 @@ jobs:
       if: startsWith( matrix.python-version, 'pypy') == false
       run: |
         robot . 
+    - uses: actions/upload-artifact@v2  # upload test results
+      if: success() || failure()        # run this step even if previous step failed
+      with:
+          name: test-results
+          path: report
    test:
     runs-on: ubuntu-latest
     steps:
