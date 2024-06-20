@@ -78,15 +78,29 @@ jobs:
       #run: |
         #invoke gen-stub
     # Temporarily ignoring pypy execution
+    #- name: Run tests with headless Chrome and with PyPy
+      #if: startsWith( matrix.python-version, 'pypy') == true
+      #run: |
+        #xvfb-run --auto-servernum python primeiro_teste.robot --nounit --zip headlesschrome
+    #- name: Run tests with ${{ matrix.browser }} if CPython
+      #if: startsWith( matrix.python-version, 'pypy') == false
+      #run: |
+        #xvfb-run --auto-servernum python primeiro_teste.robot --zip ${{ matrix.browser }}
     - name: Run tests with headless Chrome and with PyPy
       if: startsWith( matrix.python-version, 'pypy') == true
       run: |
-        xvfb-run --auto-servernum python primeiro_teste.robot --nounit --zip headlesschrome
+           robot  .
     - name: Run tests with ${{ matrix.browser }} if CPython
       if: startsWith( matrix.python-version, 'pypy') == false
       run: |
-        xvfb-run --auto-servernum python primeiro_teste.robot --zip ${{ matrix.browser }}
-
+           robot  .      
+    - name: Upload test results
+      uses: actions/upload-artifact@v1
+      if: always()
+      with:
+          name: reports
+          path: ${{ github.workspace }}/report
+           
     - uses: actions/upload-artifact@v1
       if: failure()
       with:
