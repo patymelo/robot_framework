@@ -1,0 +1,5 @@
+#Emissor que passou a ser instituição financeira com diversas contas
+robot -N 'Progressivo: Inclusão de Contas' -d '.\blc-pos-negociacao-automacao-robot\cadastro\nome\progressivo\CADBLC-1766\Emissor\Resultados\log' -i PROGRESSIVO_FILA_EVENTO_PARTICIPANTE_EMISS_INSTITUICAO_FINANCEIRA '.\blc-pos-negociacao-automacao-robot\cadastro\nome\progressivo\CADBLC-1766\Emissor\'
+
+#Anexar resultados dos testes no jira
+robot -N 'Anexar Resultados no Jira' -d '.\blc-pos-negociacao-automacao-robot\cadastro\nome\progressivo\CADBLC-1766\Emissor\Resultados\JiraUpload\' -i UPLOAD_RESULTADO_JIRA '.\blc-pos-negociacao-automacao-robot\cadastro\nome\progressivo\CADBLC-1766\Emissor\'

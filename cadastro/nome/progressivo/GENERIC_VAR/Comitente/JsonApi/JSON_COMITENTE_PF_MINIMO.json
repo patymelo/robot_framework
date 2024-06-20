@@ -1,0 +1,54 @@
+{
+   "data":{
+      "confirmationDataIndicator":true,
+      "updateDate":"28/06/2023",
+      "investor":{
+         "customerAccountHolderCode":"73410.00-5",
+         "individualDepositAccountCode":87894749,
+         "taxNatureCode":"Isento",
+         "documentNumber": "290.816.435-33",
+         "investorName":"W API COMITENTE PF RESIDENTE",
+         "residenceCountryCode":1,
+         "selicAccountCode":"99999999-9",
+         "leiCode":"987654321"
+      },
+      "individualInvestor":{
+         "birthDate":"02/02/2000",
+         "genderCode":"MASCULINO",
+         "fatherName":"NOME DO PAI",
+         "motherName":"NOME DA MAE",
+         "maritalStatusCode":"DIVORCIADO",
+         "birthStateCode":26,
+         "birthCityCode":3154,
+         "birthCountryCode":1,
+         "relatedPersonIndicator":true,
+         "riskClassificationCode":"B",
+         "riskClassificationName":"Desc Risco",
+         "professionName":272,
+         "documentTypeCode":"CARTEIRA IDENTIDADE",
+         "documentNumber":"488854159",
+         "documentIssueAgencyName":"SSP",
+         "documentIssueDate":"31/05/2019",
+         "chosenName":"Nome Social",
+         "politicallyExposedPersonCode":"NAO_INFORMADO",
+         "investmentFundAdministratorIndicator":true,
+         "usPersonIndicator":true,
+         "administrativePortfolioManagerIndicator":true,
+         "privateBankIndicator":true,
+         "authorizeOrderTransmissionByThird":"P",
+         "partnerName":"Nome Esposa",
+         "partnerCpfNumber":"812.650.780-25",
+         "addressIndividualInvestor":{
+            "addressTypeCode":"COMERCIAL",
+            "addressTypeName":"RUA JOSE PAULO",
+            "addressNumber":"460",
+            "addressComplementName":"COMPLEMENTO LOGRADOURO",
+            "neighborhoodName":"BAIRRO LOGRADOURO",
+            "stateCode":16,
+            "cityCode":2819,
+            "zipCode":"13348-888",
+            "countryCode":1
+         }
+      }
+   }
+}

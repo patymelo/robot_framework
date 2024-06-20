@@ -1,0 +1,3 @@
+#Demais Participantes
+robot -N 'Progressivo: Efetivação Demais Participantes' -d '.\cadastro\nome\progressivo\CADBLC-1765\DemaisParticipantes\Resultados\' -i PROGRESSIVO_FILA_EVENTO_PARTICIPANTE_ON '.\cadastro\nome\progressivo\CADBLC-1765\DemaisParticipantes\'
+robot -N 'Progressivo: Anexo e Atualização JIRA' -d '.\cadastro\nome\progressivo\CADBLC-1765\DemaisParticipantes\Jira\Resultados\' -i ANEXO_ZIRA '.\cadastro\nome\progressivo\CADBLC-1765\DemaisParticipantes\'

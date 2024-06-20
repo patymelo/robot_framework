@@ -1,4 +1,3 @@
-
 *** Settings ***
 Resource            KeywordsBD.robot
 

@@ -1,0 +1,5 @@
+#Instituição Financeira
+robot -N 'Progressivo: Encerramento de Participante Instituicao Financeira' -d '.\cadastro\nome\progressivo\CADBLC-1771\InstituicaoFinanceira\Resultados\' -i PROGRESSIVO_FILA_EVENTO_PARTICIPANTE_ON '.\cadastro\nome\progressivo\CADBLC-1771\InstituicaoFinanceira\'
+
+#Anexar resultados dos testes no jira
+robot -N 'Anexar Resultados no Jira' -d '.\cadastro\nome\progressivo\CADBLC-1771\InstituicaoFinanceira\Jira\Resultados\' -i UPLOAD_RESULTADO_JIRA '.\cadastro\nome\progressivo\CADBLC-1771\InstituicaoFinanceira\'

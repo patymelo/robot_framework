@@ -1,0 +1,66 @@
+var_amb: cert
+#var_amb_api: qaa_digibee
+var_amb_api: cert_interno_migracao
+#var_amb_api: qaa_interno
+url:
+  dev: http://localhost:7001/menu/ctp/TelaPrincipalCetip21
+  qaa: https://nomeint.cetip.net.br/menu/ctp/TelaPrincipalCetip21
+  cert: https://nomehom.cetip.net.br/menu/ctp/TelaPrincipalCetip21
+api_imercadov1:
+  dev: http://nomeapp-dev.internalenv.corp/ServicosAPI/servicos/api/internal-api/imercado/v1/accesscontrols/
+  qaa: http://nomeapp-int.internalenv.corp/ServicosAPI/servicos/api/internal-api/imercado/v1/accesscontrols/
+  qar: http://nomeapp-pre.internalenv.corp/ServicosAPI/servicos/api/internal-api/imercado/v1/accesscontrols/
+  cert: http://nomeapp-hom.internalenv.corp/ServicosAPI/servicos/api/internal-api/imercado/v1/accesscontrols/
+api_imercadov2:
+  dev: http://nomeapp-dev.internalenv.corp/ServicosAPI/servicos/api/internal-api/imercado/v2/accesscontrols
+  qaa: http://nomeapp-int.internalenv.corp/ServicosAPI/servicos/api/internal-api/imercado/v2/accesscontrols
+  qar: http://nomeapp-pre.internalenv.corp/ServicosAPI/servicos/api/internal-api/imercado/v2/accesscontrols
+  cert: http://nomeapp-hom.internalenv.corp/ServicosAPI/servicos/api/internal-api/imercado/v2/accesscontrols
+api_comitente:
+  dev:  http://localhost:7001/ServicosAPI/servicos/api/investors
+  qaa:  http://nomeapp-int.internalenv.corp/ServicosAPI/servicos/api/investors
+  qar:  http://nomeapp-pre.internalenv.corp/ServicosAPI/servicos/api/investors
+  cert: http://nomeapp-hom.internalenv.corp/ServicosAPI/servicos/api/investors
+api_digibee:
+  qaa: http://nome-digibee-int.internalenv.corp/ServicosAPI/servicos/api/investors
+  qar: http://nome-digibee-pre.internalenv.corp/ServicosAPI/servicos/api/investors
+  cert: http://nome-digibee-hom.internalenv.corp/ServicosAPI/servicos/api/investors
+api_comitente_migracao:
+  dev:  http://localhost:7001/ServicosAPI/servicos/api/investors
+  qaa:  http://nomeapp-int.internalenv.corp/ServicosAPI/servicos/api/pipeline/b3/v1/investors
+  qar:  http://nomeapp-pre.internalenv.corp/ServicosAPI/servicos/api/otc-investors/v1
+  cert: https://api-balcao-cert.b3.com.br/pipeline/b3/v1/investors
+
+token_api_itaubm: eyJhbGciOiJSUzI1NiJ9.eyJhcHBsaWNhdGlvbklkIjoiNWRiZDk5NmEtY2FkOC00YTFmLWI2YzUtOTM5NmRkYzY4NjMzIiwiZXhwIjoxNzE4MjM2NjA5LCAic3ViIjoiNjU5OS0xMDExOTk1NTUiLCAiaWRlbnRpZmljYWRvclBhcnRpY2lwYW50ZSI6NjU5OSwgImlkZW50aWZpY2Fkb3JVc3VhcmlvIjoxMDExOTk1NTUsICJpc3MiOiJDTj1KV1QgSW50ZXJtZWQgQ2VydGlmaWNhdGUgLSBOUFJPRCxPVT1HQ01DLE89QjMgU0EsTD1TYW8gUGF1bG8sUz1TUCxDPUJSIiwgIm5vbWVQYXJ0aWNpcGFudGUiOiJJVEFVQk0iLCAibm9tZVVzdWFyaW8iOiJBUElDVFAiLCAic2Vzc2FvIjoiMTAxMTk5NTU1QDA2MTIwODU2NDkiLCAidGlwb0FjZXNzbyI6IltpbnZhbGlkIGZpZWxkXSJ9IA.fAtzSjz_InLWymA8Er7PFIJBGBqocsoa9x9roEXHz3_sS1Enp11g0-w45rnhAoRjqV0PvRchMWCkBR7xcGag_v2wVpyFcE8b3SQkeqqddxNiUZsdz3bsl9hfdT36B7nHHlKV5ZD3BBALekHCG0S3pb_n6zDjXdimDEjwFsTxj_czzvrYFl1ozddaPW1rEXLf4MKgmRAGBHHEYqurdXtaXZ2JzE_vQzXL0yhy_iurftWLZ_TDmmsU9flIFg9QuKDY1NdBhkxx2LSwOhQ2W3TQrSFYcsIZb_kMuRO3m9YKG8aE-F5vi1D_9oLDfTzOboPMZhQ3vXL9ezbLs4u7FMehtQ
+token_api_riobm: eyJhbGciOiJSUzI1NiJ9.eyJhcHBsaWNhdGlvbklkIjoiNWRiZDk5NmEtY2FkOC00YTFmLWI2YzUtOTM5NmRkYzY4NjMzIiwiZXhwIjoxNzE4MjM2MjUwLCAic3ViIjoiOTU4NjgtMTAwNzA0ODQ5IiwgImlkZW50aWZpY2Fkb3JQYXJ0aWNpcGFudGUiOjk1ODY4LCAiaWRlbnRpZmljYWRvclVzdWFyaW8iOjEwMDcwNDg0OSwgImlzcyI6IkNOPUpXVCBJbnRlcm1lZCBDZXJ0aWZpY2F0ZSAtIE5QUk9ELE9VPUdDTUMsTz1CMyBTQSxMPVNhbyBQYXVsbyxTPVNQLEM9QlIiLCAibm9tZVBhcnRpY2lwYW50ZSI6IlJJT0JNIiwgIm5vbWVVc3VhcmlvIjoiQVBJQ1RQIiwgInNlc3NhbyI6IjEwMDcwNDg0OUAwNjEyMDg1MDUwIiwgInRpcG9BY2Vzc28iOiJbaW52YWxpZCBmaWVsZF0ifSA.a6OJS640BqsKb5DJr8-qrt1OP-Zrqc3eseMo54uhEBVePswUFMQyvXZHtoww1xNo28RNFxASS1ZhSqLpbQHkJHiRM7T7-qe1yQtPsloWAc33BFtaVoFpgZ803onIvWYEP5s4dTeMjmuACeCF6tlcK6_WyhdqA-yp7L8tT3xs5T65WqUGITtT5UmftEzOuVW-au_owu6NdCtICjQuUp4FHCztU6pazpp0-I3kOU1DnbtiYfHRj9zHVD_JcgLHZHQrfu6y1pv_l442nLIlbfyfpxf5a0X9Q0lT3_jeYAxTJ4MsRYvaGh9WClRbKsg6V5SuPAoqXvS2DLJvfT5MuQaznA
+
+TOGGLE: SIM
+EMAIL_TOKEN_CADASTRO_PREVIO: prestador-patricia.melo@b3.com.br
+CAPTCHA_HABILITADO: NAO
+url_ficha_demais_inc:
+    dev: http://localhost:7001/Sap/ctp/EntradaDadosTempDemaisParticipantes
+    des: https://nome21des.cetip.ctp/menu/ctp/FiltroDeAcessoCetip21/Cetip21-SAP-EntradaDadosTempDemaisParticipantes
+    qaa: https://nomeint.cetip.net.br/menu/ctp/FiltroDeAcessoCetip21/Cetip21-SAP-EntradaDadosTempDemaisParticipantes
+    qar: https://nomepre.cetip.net.br/menu/ctp/FiltroDeAcessoCetip21/Cetip21-SAP-EntradaDadosTempDemaisParticipantes
+    cert: https://nomehom.cetip.net.br/menu/ctp/FiltroDeAcessoCetip21/Cetip21-SAP-EntradaDadosTempDemaisParticipantes
+url_ficha_instituicao_inc:
+    dev: http://localhost:7001/Sap/ctp/EntradaDadosTempParticipante
+    des: https://nome21des.cetip.ctp/menu/ctp/FiltroDeAcessoCetip21/Cetip21-SAP-EntradaDadosTempParticipante
+    qaa: https://nomeint.cetip.net.br/menu/ctp/FiltroDeAcessoCetip21/Cetip21-SAP-EntradaDadosTempParticipante
+    qar: https://nomepre.cetip.net.br/menu/ctp/FiltroDeAcessoCetip21/Cetip21-SAP-EntradaDadosTempParticipante
+    cert: https://nomehom.cetip.net.br/menu/ctp/FiltroDeAcessoCetip21/Cetip21-SAP-EntradaDadosTempParticipante
+url_ficha_emissor_inc:
+    dev: http://localhost:7001/Sap/ctp/EntradaDadosEmissorInternet
+    des: https://nome21des.cetip.ctp/menu/ctp/FiltroDeAcessoCetip21/Cetip21-SAP-EntradaDadosEmissorInternet
+    qaa: https://nomeint.cetip.net.br/menu/ctp/FiltroDeAcessoCetip21/Cetip21-SAP-EntradaDadosEmissorInternet
+    qar: https://nomepre.cetip.net.br/menu/ctp/FiltroDeAcessoCetip21/Cetip21-SAP-EntradaDadosEmissorInternet
+    cert: https://nomehom.cetip.net.br/menu/ctp/FiltroDeAcessoCetip21/Cetip21-SAP-EntradaDadosEmissorInternet
+url_ficha_inr_inc:
+    dev: http://localhost:7001/Sap/ctp/EntradaInvestNResidenteInternet
+    des: https://nome21des.cetip.ctp/menu/ctp/FiltroDeAcessoCetip21/Cetip21-SAP-EntradaInvestNResidenteInternet
+    qaa: https://nomeint.cetip.net.br/menu/ctp/FiltroDeAcessoCetip21/Cetip21-SAP-EntradaInvestNResidenteInternet
+    qar: https://nomepre.cetip.net.br/menu/ctp/FiltroDeAcessoCetip21/Cetip21-SAP-EntradaInvestNResidenteInternet
+    cert: https://nomehom.cetip.net.br/menu/ctp/FiltroDeAcessoCetip21/Cetip21-SAP-EntradaInvestNResidenteInternet
+path_arq:    ${CURDIR}\\Comitente\\Upload\\
+path_layout: ${CURDIR}\\Comitente\\LayoutArq\\
+path_json:   ${CURDIR}\\Comitente\\JsonApi

@@ -1,0 +1,138 @@
+{
+   "data":{
+      "confirmationDataIndicator":true,
+      "updateDate":"18/08/2023",
+      "investor":{
+         "customerAccountHolderCode":"73410.00-5",
+         "individualDepositAccountCode": 549498464654,
+         "taxNatureCode":"Isento",
+         "documentNumber": "021.957.310-79",
+         "investorName":"API COMITENTE INCLUIR PF RESIDENTE TESTE PERFORMANCE",
+         "residenceCountryCode":1,
+         "selicAccountCode":"99999999-9",
+         "leiCode":"987654321",
+         "equitySituation":{
+            "currencyCode":58,
+            "annualIncomeValue":"100010001000.13",
+            "annualIncomeDate":"09/05/2022",
+            "equityValue":"200020002000.24",
+            "equityDate":"09/05/2022",
+            "lastYearBillingValue":"300030003000.32",
+            "billingDate":"09/05/2022"
+         },
+         "fatca":{
+            "relatedCountryCode":55,
+            "originCountryCode":264,
+            "giinNumber":"123456"
+         }
+      },
+      "individualInvestor":{
+         "birthDate":"02/02/2010",
+         "genderCode":"MASCULINO",
+         "fatherName":"NOME DO PAI TESTE PERFORMANCE",
+         "motherName":"NOME DA MAE TESTE PERFORMANCE",
+         "maritalStatusCode":"DIVORCIADO",
+         "birthStateCode":26,
+         "birthCityCode":3154,
+         "birthCountryCode":1,
+         "relatedPersonIndicator":true,
+         "riskClassificationCode":"O",
+         "riskClassificationName":"Desc Risco",
+         "professionName":241,
+         "documentTypeCode":"CPF",
+         "documentNumber":"78618316040",
+         "documentIssueAgencyName":"SSP",
+         "documentIssueDate":"31/05/2019",
+         "chosenName":"Nome Social Teste Performance",
+         "politicallyExposedPersonCode":"NAO_INFORMADO",
+         "investmentFundAdministratorIndicator":true,
+         "usPersonIndicator":true,
+         "administrativePortfolioManagerIndicator":true,
+         "privateBankIndicator":true,
+         "authorizeOrderTransmissionByThird":"P",
+         "partnerName":"Nome Esposa Teste Performance",
+         "partnerCpfNumber":"812.650.780-25",
+         "addressIndividualInvestor":{
+            "addressTypeCode":"COMERCIAL",
+            "addressTypeName":"RUA TESTE PERFORMANCE",
+            "addressNumber":"460",
+            "addressComplementName":"COMPLEMENTO LOGRADOURO",
+            "neighborhoodName":"BAIRRO LOGRADOURO",
+            "stateCode":16,
+            "cityCode":2819,
+            "zipCode":"13348-888",
+            "countryCode":1,
+            "emailIndividualInvestor":{
+               "emailTypeCode":"COMERCIAL",
+               "emailName":"e-mail-teste-performance@pessoafisica.com.br"
+            },
+            "addressPhoneIndividualInvestor":{
+               "phoneAreaCodeNumber":11,
+               "phoneNumber":55667788,
+               "phoneExtension":5522,
+               "phoneTypeCode":"COMERCIAL"
+            }
+         },
+         "professionalRelationship":{
+            "workCompanyIndicator":true,
+            "workCompanyDocumentNumber":"17.922.748/0001-44",
+            "workCompanyName":"Empresa em que trabalha TESTE PERFORMANCE"
+         },
+         "inventory":{
+            "investorDeceasedIndicator":true,
+            "inventoryCpfNumber":"319.828.890-80",
+            "inventoryName":"Nome Inventariante TESTE PERFORMANCE",
+            "emailInventory":{
+               "emailTypeCode":"PARTICULAR",
+               "emailName":"invent-teste-inventory@inventariante.com.br"
+            },
+            "privatePhoneInventory":{
+               "phoneTypeCode":"PARTICULAR",
+               "phoneAreaCodeNumber":19,
+               "phoneNumber":88776655
+            }
+         },
+    "minorResponsible": {
+      "emancipatedIndicator": false,
+      "minorResponsibleName": "Responsavel Menor TESTE PERFORMANCE",
+      "minorResponsibleCpfNumber": "894.155.600-70",
+      "emailMinorResponsible": {
+        "emailTypeCode": "PARTICULAR",
+        "emailName": "teste-minorResponsible@respmenor.com.br"
+      },
+      "privatePhoneMinorResponsible": {
+		"phoneAreaCodeNumber": 41,
+        "phoneNumber": 988556644,
+        "phoneTypeCode": "PARTICULAR"
+	  }
+    }
+      },
+      "representativeInvestor":{
+         "representativeTypeCode":"Procurador",
+         "documentNumber":36435592080,
+         "representativeName":"Representante Procurador TESTE PERFORMANCE",
+         "politicallyExposedPersonCode":"FALSO",
+         "addressRepresentativeInvestor":{
+            "addressTypeCode":"RESIDENCIAL",
+            "addressTypeName":"RUA REPRESENTANTE TESTE PERFORMANCE",
+            "addressNumber":50023,
+            "addressComplementName":"COMPLEMENTO REPRESENTANTE PERFORMANCE",
+            "neighborhoodName":"FORMOSA",
+            "stateCode":26,
+            "cityCode":3367,
+            "zipCode":"18078-452",
+            "countryCode":1,
+            "emailRepresentativeInvestor":{
+               "emailTypeCode":"PARTICULAR",
+               "emailName":"teste-representativeInvestor@representante.com.br"
+            },
+            "adressPhoneRepresentativeInvestor":{
+               "phoneAreaCodeNumber":"44",
+               "phoneNumber":"22334455",
+               "phoneExtension":"6677",
+               "phoneTypeCode":"PARTICULAR"
+            }
+         }
+      }
+   }
+}

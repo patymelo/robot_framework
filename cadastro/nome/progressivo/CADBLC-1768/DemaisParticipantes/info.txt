@@ -1,0 +1,5 @@
+#Demais Participantes
+robot -N 'Progressivo: Bloquear Contas para Participante Demais Participantes' -d '.\blc-pos-negociacao-automacao-robot\cadastro\nome\progressivo\CADBLC-1768\DemaisParticipantes\Resultados\' -i PROGRESSIVO_CADBLC_1768 '.\blc-pos-negociacao-automacao-robot\cadastro\nome\progressivo\CADBLC-1768\DemaisParticipantes\'
+
+#rodar testes
+robot -N 'Rodar Testes' -d '.\blc-pos-negociacao-automacao-robot\cadastro\nome\progressivo\CADBLC-1768\DemaisParticipantes\Jira\Resultados\' '.\blc-pos-negociacao-automacao-robot\cadastro\nome\progressivo\CADBLC-1768\DemaisParticipantes\RodarTestes.robot'

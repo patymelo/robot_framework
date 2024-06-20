@@ -1,0 +1,5 @@
+#Trocar conta principal
+robot -N 'Progressivo: Trocar Conta principal Participantes' -d '.\blc-pos-negociacao-automacao-robot\cadastro\nome\progressivo\CADBLC-1769\TrocarContaPrincipal\Resultados\' -i PROGRESSIVO_CADBLC_1769_TROCA_CONTA_PRINCIPAL_PARTICIPANTE_ON '.\blc-pos-negociacao-automacao-robot\cadastro\nome\progressivo\CADBLC-1769\TrocarContaPrincipal\'
+
+#rodar testes
+robot -N 'Rodar Testes' -d '.\blc-pos-negociacao-automacao-robot\cadastro\nome\progressivo\CADBLC-1769\TrocarContaPrincipal\Jira\Resultados\' '.\blc-pos-negociacao-automacao-robot\cadastro\nome\progressivo\CADBLC-1769\TrocarContaPrincipal\RodarTestes.robot'

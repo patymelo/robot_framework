@@ -1,0 +1,39 @@
+{
+	"data": {
+		"confirmationDataIndicator": true,
+		"updateDate": "08/02/2022",
+		"investor": {
+			"customerAccountHolderCode": "05000.00-5",
+			"individualDepositAccountCode": "2287459595",
+			"taxNatureCode": "Isento",
+			"documentNumber": "37.506.142/0001-35",
+			"investorName": "API COMITENTE PJ RESIDENTE",
+			"residenceCountryCode": 1
+		},
+		"legalInvestor": {
+			"companyStartDate": "30/04/2020",
+			"economicActivityCode": 457,
+			"addressLegalInvestor": {
+				"addressTypeCode": "MATRIZ",
+				"addressTypeName": "RUA JOSE PAULO",
+				"addressNumber": "460",
+				"addressComplementName": "COMPLEMENTO LOGRADOURO",
+				"neighborhoodName": "BAIRRO LOGRADOURO",
+				"stateCode": 26,
+				"cityCode": 2819,
+				"zipCode": "13348-888",
+				"countryCode": 1,
+				"emailLegalInvestor": {
+					"emailTypeCode": "COMERCIAL",
+					"emailName": "e-mail@pessoajuridica.com.br"
+				},
+				"addressPhoneLegalInvestor": {
+					"phoneAreaCodeNumber": 11,
+					"phoneNumber": 55667788,
+					"phoneExtension": 5522,
+					"phoneTypeCode": "COMERCIAL"
+				}
+			}
+		}
+	}
+}

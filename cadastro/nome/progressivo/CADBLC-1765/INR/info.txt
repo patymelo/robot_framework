@@ -1,0 +1,3 @@
+#Instituição Investidor Não Residente
+robot -N 'Progressivo: Efetivação INR' -d '.\cadastro\nome\progressivo\CADBLC-1765\INR\Resultados\' -i PROGRESSIVO_FILA_EVENTO_PARTICIPANTE_ON '.\cadastro\nome\progressivo\CADBLC-1765\INR\'
+robot -N 'Progressivo: Anexo e Atualização JIRA' -d '.\cadastro\nome\progressivo\CADBLC-1765\INR\Jira\Resultados\' -i ANEXO_ZIRA '.\cadastro\nome\progressivo\CADBLC-1765\INR\'

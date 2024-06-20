@@ -1,0 +1,89 @@
+{
+	"data": {
+		"confirmationDataIndicator": true,
+		"updateDate": "25/11/2022",
+		"investor": {
+			"customerAccountHolderCode": "73410.00-5",
+			"taxNatureCode": "Tributavel",
+			"documentNumber": "95.716.268/0001-30",
+			"investorName": "API COMITENTE PJ RESIDENTE API",
+			"residenceCountryCode": 1,
+			"selicAccountCode": "88888888-8",
+			"leiCode": "987654321",
+			"equitySituation": {
+				"currencyCode": 58,
+				"annualIncomeValue": "1000.10",
+				"annualIncomeDate": "14/02/2022",
+				"equityValue": "2000.20",
+				"equityDate": "11/02/2022",
+				"lastYearBillingValue": "3000.30",
+				"billingDate": "10/02/2000"
+			},
+			"fatca": {
+				"relatedCountryCode": 55,
+				"originCountryCode": 264,
+				"giinNumber": "123456"
+			}
+		},
+		"legalInvestor": {
+			"authorizeOrderTransmissionByThird": "P",
+			"companyStartDate": "30/04/2020",
+			"nonProfitCompanyIndicator": false,
+			"administrativePortfolioManagerIndicator": false,
+			"investmentFundAdministratorIndicator": false,
+			"economicGroupName": "Grupo Teste API",
+			"riskClassificationCode": "M",
+			"riskClassificationName": "Risco medio API",
+			"economicActivityCode": 457,
+			"addressLegalInvestor": {
+				"addressTypeCode": "MATRIZ",
+				"addressTypeName": "RUA JOSE PAULO",
+				"addressNumber": "460",
+				"addressComplementName": "COMPLEMENTO LOGRADOURO",
+				"neighborhoodName": "BAIRRO LOGRADOURO",
+				"stateCode": 26,
+				"cityCode": 638,
+				"zipCode": "13348-888",
+				"countryCode": 1,
+				"emailLegalInvestor": {
+					"emailTypeCode": "COMERCIAL",
+					"emailName": "e-mail@pessoajuridica.com.br"
+				},
+				"addressPhoneLegalInvestor": {
+					"phoneAreaCodeNumber": 11,
+					"phoneNumber": 55667788,
+					"phoneExtension": 5522,
+					"phoneTypeCode": "COMERCIAL"
+				}
+			}
+		},
+		"representativeInvestor": {
+			"representativeTypeCode": "Procurador",
+            "documentTypeCode":"CPF",
+			"documentNumber": 51065872046,
+			"representativeName": "Nome Representante API",
+			"politicallyExposedPersonCode": "FALSO",
+			"addressRepresentativeLegalInvestor": {
+				"addressTypeCode": "SEM TIPO DE ENDERECO",
+				"addressTypeName": "RUA BENEDITO SOUZA API",
+				"addressNumber": 50023,
+				"addressComplementName": "COMPLEMENTO REPRESENTANTE API",
+				"neighborhoodName": "FORMOSA API",
+				"stateCode": 26,
+				"cityCode": 3367,
+				"zipCode": "13340-777",
+				"countryCode": 1,
+				"emailRepresentativeLegalInvestor": {
+					"emailTypeCode": "PARTICULAR",
+					"emailName": "teste_alteracao_api@representante.com.br"
+				},
+				"addressPhoneRepresentativeLegalInvestor": {
+					"phoneAreaCodeNumber": "11",
+					"phoneNumber": "77778888",
+					"phoneExtension": "9999",
+					"phoneTypeCode": "PARTICULAR"
+				}
+			}
+		}
+	}
+}

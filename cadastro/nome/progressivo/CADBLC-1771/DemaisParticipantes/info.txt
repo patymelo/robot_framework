@@ -1,0 +1,5 @@
+#Demais Participantes
+robot -N 'Progressivo: Encerramento de Participante' -d '.\blc-pos-negociacao-automacao-robot\cadastro\nome\progressivo\CADBLC-1771\DemaisParticipantes\Resultados\' -i PROGRESSIVO_FILA_EVENTO_PARTICIPANTE_DEMAIS_PARTICIPANTES '.\blc-pos-negociacao-automacao-robot\cadastro\nome\progressivo\CADBLC-1771\DemaisParticipantes\'
+
+#Anexar resultados dos testes no jira
+robot -N 'Anexar Resultados no Jira' -d '.\blc-pos-negociacao-automacao-robot\cadastro\nome\progressivo\CADBLC-1771\DemaisParticipantes\Resultados\JiraUpload\' -i UPLOAD_RESULTADO_JIRA '.\blc-pos-negociacao-automacao-robot\cadastro\nome\progressivo\CADBLC-1771\DemaisParticipantes\'

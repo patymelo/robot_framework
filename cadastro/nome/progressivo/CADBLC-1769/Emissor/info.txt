@@ -1,0 +1,5 @@
+#Emissor
+robot -N 'Progressivo: Encerrar Contas para Participante Emissor' -d '.\blc-pos-negociacao-automacao-robot\cadastro\nome\progressivo\CADBLC-1769\Emissor\Resultados\' -i PROGRESSIVO_CADBLC_1769 '.\blc-pos-negociacao-automacao-robot\cadastro\nome\progressivo\CADBLC-1769\Emissor\'
+
+#rodar testes
+robot -N 'Rodar Testes' -d '.\blc-pos-negociacao-automacao-robot\cadastro\nome\progressivo\CADBLC-1769\Emissor\Jira\Resultados\' '.\blc-pos-negociacao-automacao-robot\cadastro\nome\progressivo\CADBLC-1769\Emissor\RodarTestes.robot'

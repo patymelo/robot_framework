@@ -1,0 +1,5 @@
+#Demais Participantes
+robot -N 'Progressivo: Inclusão Contas para Participante Demais Participantes' -d '.\blc-pos-negociacao-automacao-robot\cadastro\nome\progressivo\CADBLC-1766\DemaisParticipantes\Resultados\' -i PROGRESSIVO_FILA_EVENTO_PARTICIPANTE_DEMAIS_PARTICIPANTES_ON '.\blc-pos-negociacao-automacao-robot\cadastro\nome\progressivo\CADBLC-1766\DemaisParticipantes\'
+
+#rodar testes
+robot -N 'Rodar Testes' -d '.\blc-pos-negociacao-automacao-robot\cadastro\nome\progressivo\CADBLC-1766\DemaisParticipantes\Jira\Resultados\' '.\blc-pos-negociacao-automacao-robot\cadastro\nome\progressivo\CADBLC-1766\DemaisParticipantes\RodarTestes.robot'

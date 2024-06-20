@@ -1,0 +1,4 @@
+######################################Comando para executar por tipo de teste PJ ######################################
+robot -N 'Teste Comitente PJ Residente API' -d 'CADBLC-2218\PJ\ALT\REGRAS\Resultados\log' 'CADBLC-2218\PJ\ALT\REGRAS\testeComitentePJResidenteValidarRegrasPreenchimento.robot'
+
+robot -N 'Teste Comitente PJ Residente API' -d 'CADBLC-2218\PJ\ALT\REGRAS\Resultados\JIRA\log' 'CADBLC-2218\PJ\ALT\REGRAS\testeFinalizaAnexandoDadosJira.robot'

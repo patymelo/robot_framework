@@ -1,0 +1,6 @@
+######################################Comando para executar por tipo de teste PJ ######################################
+robot -N 'Teste Comitente PF Residente API' -d '.\blc-pos-negociacao-automacao-robot\cadastro\nome\progressivo\CADBLC-2218\PF\INC\DOMINIO\Resultados\log' '.\blc-pos-negociacao-automacao-robot\cadastro\nome\progressivo\CADBLC-2218\PF\INC\DOMINIO\testeComitentePFResidenteValidarDominio.robot'
+
+robot -N 'Teste Comitente PF Residente API' -d 'CADBLC-2218\PF\INC\DOMINIO\Resultados\JIRA\log' 'CADBLC-2218\PF\INC\DOMINIO\testeFinalizaAnexandoDadosJira.robot'
+
+

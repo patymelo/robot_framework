@@ -1,0 +1,8 @@
+#Executar test gera evento
+robot -N 'Progressivo: Alteração Dados Participante' -d '.\blc-pos-negociacao-automacao-robot\cadastro\nome\progressivo\CADBLC-1764\Resultados\GeraEvento\' -i PROGRESSIVO_FILA_EVENTO_PARTICIPANTE_GERA_EVENTO '.\blc-pos-negociacao-automacao-robot\cadastro\nome\progressivo\CADBLC-1764\'
+
+#Executar test não gera evento
+robot -N 'Progressivo: Alteração Dados Participante' -d '.\blc-pos-negociacao-automacao-robot\cadastro\nome\progressivo\CADBLC-1764\Resultados\NaoGeraEvento\' -i PROGRESSIVO_FILA_EVENTO_PARTICIPANTE_NAO_GERA_EVENTO '.\blc-pos-negociacao-automacao-robot\cadastro\nome\progressivo\CADBLC-1764\'
+
+#Anexar resultados dos testes no jira
+robot -N 'Anexar Resultados no Jira' -d '.\blc-pos-negociacao-automacao-robot\cadastro\nome\progressivo\CADBLC-1764\Resultados\JiraUpload\' -i UPLOAD_RESULTADO_JIRA '.\blc-pos-negociacao-automacao-robot\cadastro\nome\progressivo\CADBLC-1764\'

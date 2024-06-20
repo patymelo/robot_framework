@@ -1,0 +1,2 @@
+#Inclusao Fundo Aberto Logado como RIOBM
+robot -N 'Progressivo: Inclusão Participante Fundo Aberto Custodiante RIOBM' -d '.\blc-pos-negociacao-automacao-robot\cadastro\nome\progressivo\CADBLC-2244\fundoaberto\Resultados\' -i PROGRESSIVO_CADBLC_2244 '.\blc-pos-negociacao-automacao-robot\cadastro\nome\progressivo\CADBLC-2244\fundoaberto\'

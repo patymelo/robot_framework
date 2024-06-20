@@ -1,0 +1,8 @@
+#API COMITENTE PROBLEMA DO BTG ENVIANDO CAMPO NULL
+robot -N 'Progressivo: API COMITENTE PROBLEMA DO BTG ENVIANDO CAMPO NULL' -d '.\blc-pos-negociacao-automacao-robot\cadastro\nome\progressivo\CADBLC-2370\Resultados\log\Inclusao\Comitente' '.\blc-pos-negociacao-automacao-robot\cadastro\nome\progressivo\CADBLC-2370\inclusao\Migracao-Digibee-Ajuste-Obrigatoriedade-Comitente-PF.robot'
+
+robot -N 'Progressivo: API COMITENTE PROBLEMA DO BTG ENVIANDO CAMPO NULL' -d '.\blc-pos-negociacao-automacao-robot\cadastro\nome\progressivo\CADBLC-2370\Resultados\log\Inclusao\Inventariante' '.\blc-pos-negociacao-automacao-robot\cadastro\nome\progressivo\CADBLC-2370\inclusao\Migracao-Digibee-Ajuste-Obrigatoriedade-Inventariante.robot'
+
+robot -N 'Progressivo: API COMITENTE PROBLEMA DO BTG ENVIANDO CAMPO NULL' -d '.\blc-pos-negociacao-automacao-robot\cadastro\nome\progressivo\CADBLC-2370\Resultados\log\Inclusao\RespMenor' '.\blc-pos-negociacao-automacao-robot\cadastro\nome\progressivo\CADBLC-2370\inclusao\Migracao-Digibee-Ajuste-Obrigatoriedade-resp-menor.robot'
+
+robot -N 'Progressivo: API COMITENTE PROBLEMA DO BTG ENVIANDO CAMPO NULL' -d '.\blc-pos-negociacao-automacao-robot\cadastro\nome\progressivo\CADBLC-2370\Resultados\log\Inclusao\Representante' '.\blc-pos-negociacao-automacao-robot\cadastro\nome\progressivo\CADBLC-2370\inclusao\Migracao-Digibee-Ajuste-Obrigatoriedade-Representante.robot'

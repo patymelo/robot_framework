@@ -1,0 +1,5 @@
+#Instituição Investidor Não Residente
+robot -N 'Progressivo: Encerramento de Participante INR' -d '.\cadastro\nome\progressivo\CADBLC-1771\INR\Resultados\' -i PROGRESSIVO_FILA_EVENTO_PARTICIPANTE_ON '.\cadastro\nome\progressivo\CADBLC-1771\INR\'
+
+#Anexar resultados dos testes no jira
+robot -N 'Anexar Resultados no Jira' -d '.\cadastro\nome\progressivo\CADBLC-1771\INR\Jira\Resultados\' -i UPLOAD_RESULTADO_JIRA '.\cadastro\nome\progressivo\CADBLC-1771\INR\'

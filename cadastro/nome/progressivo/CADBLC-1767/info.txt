@@ -1,0 +1,5 @@
+#Participante com contas 00, 10, 20, 40, e 68
+robot -N 'Progressivo: Alteração Situação de Contas' -d '.\blc-pos-negociacao-automacao-robot\cadastro\nome\progressivo\CADBLC-1767\Resultados\log' -i PROGRESSIVO_CADBLC_1767 '.\blc-pos-negociacao-automacao-robot\cadastro\nome\progressivo\CADBLC-1767\'
+
+#Anexar resultados dos testes no jira
+robot -N 'Anexar Resultados no Jira' -d '.\blc-pos-negociacao-automacao-robot\cadastro\nome\progressivo\CADBLC-1767\Resultados\JiraUpload\' -i UPLOAD_RESULTADO_JIRA '.\blc-pos-negociacao-automacao-robot\cadastro\nome\progressivo\CADBLC-1767\'

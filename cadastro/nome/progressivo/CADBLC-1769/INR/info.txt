@@ -1,0 +1,5 @@
+#INR
+robot -N 'Progressivo: Encerrar Contas para Participante INR' -d '.\blc-pos-negociacao-automacao-robot\cadastro\nome\progressivo\CADBLC-1769\INR\Resultados\' -i PROGRESSIVO_CADBLC_1769 '.\blc-pos-negociacao-automacao-robot\cadastro\nome\progressivo\CADBLC-1769\INR\'
+
+#rodar testes
+robot -N 'Rodar Testes' -d '.\blc-pos-negociacao-automacao-robot\cadastro\nome\progressivo\CADBLC-1769\INR\Jira\Resultados\' '.\blc-pos-negociacao-automacao-robot\cadastro\nome\progressivo\CADBLC-1769\INR\RodarTestes.robot'

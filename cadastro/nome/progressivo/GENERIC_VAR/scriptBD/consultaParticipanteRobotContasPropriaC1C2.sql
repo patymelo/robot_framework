@@ -1,0 +1,38 @@
+--Participantes Banco Multiplo que foram incluidos via ROBOT e que possuem ao menos um conjunto de contas 00,10,20,60 diferente de encerrada
+SELECT DISTINCT tmp_partic.* FROM (
+	SELECT * FROM CETIP.V_PARTICIPANTES vp WHERE 1=1
+	AND vp.NOM_SIMPLIFICADO_ENTIDADE LIKE 'ROBOT%'
+	AND vp.NOM_SIMPLIFICADO_ENTIDADE LIKE '%BM%'
+	AND vp.NOM_SIMPLIFICADO_ENTIDADE <> 'ROBOTBM'
+	AND vp.NUM_ID_SITUACAO_PARTICIPANTE = 1
+) tmp_partic,
+(
+	SELECT vcp.NUM_ID_ENTIDADE FROM CETIP.CONTA_PARTICIPANTE vcp
+	WHERE 1=1
+	AND vcp.NUM_ID_TIPO_CONTA = 1
+	AND vcp.NUM_ID_SITUACAO_CONTA != 4
+)tmp_conta_propria,
+(
+	SELECT vcp.NUM_ID_ENTIDADE FROM CETIP.CONTA_PARTICIPANTE vcp
+	WHERE 1=1
+	AND vcp.NUM_ID_TIPO_CONTA = 5
+	AND vcp.NUM_ID_SITUACAO_CONTA != 4
+)tmp_conta_c1,
+(
+	SELECT vcp.NUM_ID_ENTIDADE FROM CETIP.CONTA_PARTICIPANTE vcp
+	WHERE 1=1
+	AND vcp.NUM_ID_TIPO_CONTA = 10
+	AND vcp.NUM_ID_SITUACAO_CONTA != 4
+)tmp_conta_c2,
+(
+	SELECT vcp.NUM_ID_ENTIDADE FROM CETIP.CONTA_PARTICIPANTE vcp
+	WHERE 1=1
+	AND vcp.NUM_ID_TIPO_CONTA = 28
+	AND vcp.NUM_ID_SITUACAO_CONTA != 4
+)tmp_conta_garantia
+WHERE 1=1
+AND tmp_partic.NUM_ID_ENTIDADE = tmp_conta_propria.NUM_ID_ENTIDADE
+AND tmp_partic.NUM_ID_ENTIDADE = tmp_conta_c1.NUM_ID_ENTIDADE
+AND tmp_partic.NUM_ID_ENTIDADE = tmp_conta_c2.NUM_ID_ENTIDADE
+AND tmp_partic.NUM_ID_ENTIDADE = tmp_conta_garantia.NUM_ID_ENTIDADE
+ORDER BY tmp_partic.dat_alteracao desc;

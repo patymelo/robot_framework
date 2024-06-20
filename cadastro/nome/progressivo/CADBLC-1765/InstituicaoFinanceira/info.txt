@@ -1,0 +1,6 @@
+#Instituição Financeira
+robot -N 'Progressivo: Efetivação Instituicao Financeira' -d '.\cadastro\nome\progressivo\CADBLC-1765\InstituicaoFinanceira\Resultados\' -i PROGRESSIVO_FILA_EVENTO_PARTICIPANTE_ON '.\cadastro\nome\progressivo\CADBLC-1765\InstituicaoFinanceira\'
+robot -N 'Progressivo: Anexo e Atualização JIRA' -d '.\cadastro\nome\progressivo\CADBLC-1765\InstituicaoFinanceira\Jira\Resultados\' -i ANEXO_ZIRA '.\cadastro\nome\progressivo\CADBLC-1765\InstituicaoFinanceira\'
+
+
+robot -N 'Grava Passos' -d '.\cadastro\nome\progressivo\CADBLC-1765\gravacao\Resultados\' -i GRAVACAO '.\cadastro\nome\progressivo\CADBLC-1765\gravacao\'

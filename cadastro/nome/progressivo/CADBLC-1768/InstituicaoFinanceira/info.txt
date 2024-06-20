@@ -1,0 +1,5 @@
+#Instituição Financeira
+robot -N 'Progressivo: Bloquear Contas para Participante Instituição Financeira' -d '.\blc-pos-negociacao-automacao-robot\cadastro\nome\progressivo\CADBLC-1768\InstituicaoFinanceira\Resultados\' -i PROGRESSIVO_FILA_EVENTO_PARTICIPANTE_INSTITUICAO_FINANCEIRA_ON '.\blc-pos-negociacao-automacao-robot\cadastro\nome\progressivo\CADBLC-1768\InstituicaoFinanceira\'
+
+#rodar testes
+robot -N 'Rodar Testes' -d '.\blc-pos-negociacao-automacao-robot\cadastro\nome\progressivo\CADBLC-1768\InstituicaoFinanceira\Jira\Resultados\' '.\blc-pos-negociacao-automacao-robot\cadastro\nome\progressivo\CADBLC-1768\InstituicaoFinanceira\RodarTestes.robot'

@@ -1,0 +1,138 @@
+{
+    "data": {
+        "confirmationDataIndicator": true,
+        "updateDate": "08/06/2024",
+        "investor": {
+            "customerAccountHolderCode": "05000005",
+            "individualDepositAccountCode": null,
+            "taxNatureCode": "Tributavel",
+            "documentNumber": "679.798.500-50",
+            "investorName": "DANIEL DIAS ADEODATO",
+            "residenceCountryCode": 1,
+            "selicAccountCode": null,
+            "leiCode": null,
+            "equitySituation": {
+                "currencyCode": null,
+                "annualIncomeValue": null,
+                "annualIncomeDate": null,
+                "equityValue": null,
+                "equityDate": null,
+                "lastYearBillingValue": null,
+                "billingDate": null
+            },
+            "fatca": {
+                "relatedCountryCode": null,
+                "originCountryCode": null,
+                "giinNumber": null
+            }
+        },
+        "individualInvestor": {
+            "birthDate": "03/08/1980",
+            "genderCode": "MASCULINO",
+            "fatherName": null,
+            "motherName": "WANDA MARIA DIAS ADEODATO",
+            "maritalStatusCode": "SOLTEIRO (A)",
+            "birthStateCode": null,
+            "birthCityCode": null,
+            "birthCountryCode": 1,
+            "relatedPersonIndicator": null,
+            "riskClassificationCode": null,
+            "riskClassificationName": null,
+            "professionName": 0,
+            "documentTypeCode": "CNH",
+            "documentNumber": "05140566665",
+            "documentIssueAgencyName": "DETRAN",
+            "documentIssueDate": null,
+            "chosenName": null,
+            "politicallyExposedPersonCode": "FALSO",
+            "investmentFundAdministratorIndicator": null,
+            "usPersonIndicator": null,
+            "administrativePortfolioManagerIndicator": null,
+            "privateBankIndicator": null,
+            "authorizeOrderTransmissionByThird": "N",
+            "partnerName": null,
+            "partnerCpfNumber": null,
+            "addressIndividualInvestor": {
+                "addressTypeCode": "RESIDENCIAL",
+                "addressTypeName": "RUA CORONEL JOAQUIM LOPES",
+                "addressNumber": "924",
+                "addressComplementName": "",
+                "neighborhoodName": "CENTRO",
+                "stateCode": 6,
+                "cityCode": 772,
+                "zipCode": "62010100",
+                "countryCode": 1,
+                "emailIndividualInvestor": {
+                    "emailTypeCode": null,
+                    "emailName": null
+                },
+                "addressPhoneIndividualInvestor": {
+                    "phoneAreaCodeNumber": null,
+                    "phoneNumber": null,
+                    "phoneExtension": null,
+                    "phoneTypeCode": null
+                }
+            },
+            "professionalRelationship": {
+                "workCompanyIndicator": null,
+                "workCompanyDocumentNumber": null,
+                "workCompanyName": null
+            },
+            "inventory": {
+                "investorDeceasedIndicator": null,
+                "inventoryCpfNumber": null,
+                "inventoryName": null,
+                "emailInventory": {
+                    "emailTypeCode": null,
+                    "emailName": null
+                },
+                "privatePhoneInventory": {
+                    "phoneTypeCode": null,
+                    "phoneAreaCodeNumber": null,
+                    "phoneNumber": null
+                }
+            },
+            "minorResponsible": {
+                "emancipatedIndicator": null,
+                "minorResponsibleName": null,
+                "minorResponsibleCpfNumber": null,
+                "privatePhoneMinorResponsible": {
+                    "phoneTypeCode": null,
+                    "phoneAreaCodeNumber": null,
+                    "phoneNumber": null
+                },
+                "emailMinorResponsible": {
+                    "emailTypeCode": null,
+                    "emailName": null
+                }
+            }
+        },
+        "representativeInvestor": {
+            "representativeTypeCode": null,
+            "documentNumber": null,
+            "representativeName": null,
+            "politicallyExposedPersonCode": null,
+            "addressRepresentativeInvestor": {
+                "addressTypeCode": null,
+                "addressTypeName": null,
+                "addressNumber": null,
+                "addressComplementName": null,
+                "neighborhoodName": null,
+                "stateCode": null,
+                "cityCode": null,
+                "zipCode": null,
+                "countryCode": null,
+                "emailRepresentativeInvestor": {
+                    "emailTypeCode": null,
+                    "emailName": null
+                },
+                "adressPhoneRepresentativeInvestor": {
+                    "phoneAreaCodeNumber": null,
+                    "phoneNumber": null,
+                    "phoneExtension": null,
+                    "phoneTypeCode": null
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,5 @@
+#Participante bloqueia contas 00, 10, 20, 40, 60 e 68
+robot -N 'Progressivo: Bloqueio de Contas' -d '.\blc-pos-negociacao-automacao-robot\cadastro\nome\progressivo\CADBLC-1768\Resultados\log' -i PROGRESSIVO_CADBLC_1768 '.\blc-pos-negociacao-automacao-robot\cadastro\nome\progressivo\CADBLC-1768\'
+
+#Anexar resultados dos testes no jira
+robot -N 'Anexar Resultados no Jira' -d '.\blc-pos-negociacao-automacao-robot\cadastro\nome\progressivo\CADBLC-1768\Resultados\JiraUpload\' -i UPLOAD_RESULTADO_JIRA '.\blc-pos-negociacao-automacao-robot\cadastro\nome\progressivo\CADBLC-1768\'
