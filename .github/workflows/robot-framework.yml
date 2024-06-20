@@ -75,7 +75,7 @@ jobs:
     - name: Run tests with headless Chrome and with PyPy
       if: startsWith( matrix.python-version, 'pypy') == true
       run: |
-        robot .  --html=/report/report.html 
+        robot .  -d report
 
     - name: Run tests with ${{ matrix.browser }} if CPython
       if: startsWith( matrix.python-version, 'pypy') == false
@@ -86,5 +86,5 @@ jobs:
       if: success() || failure()
       with:
        name: Pytest Report           # Name of the folder
-       path: /report           # Path to test results
+       path: report           # Path to test results
  
