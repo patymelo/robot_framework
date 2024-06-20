@@ -76,6 +76,11 @@ jobs:
       if: startsWith( matrix.python-version, 'pypy') == true
       run: |
         robot .
+    - uses: actions/upload-artifact@v2  # upload test results
+      if: success() || failure()        # run this step even if previous step failed
+      with:
+          name: test-results
+          path: report  
       env:
          ROBOT_TESTS_DIR: ${{ github.workspace }}
          ROBOT_REPORTS_DIR: ${{ github.workspace }}/report   
