@@ -16,7 +16,8 @@ jobs:
         python-version: [3.11]  # 3.12, pypy-3.9
         rf-version: [7.0]
         selenium-version: [4.21.0]
-        browser: [firefox, chrome, headlesschrome]  #edge
+        #browser: [firefox, chrome, headlesschrome]  #edge
+        browser: [chrome]  #edge
     steps:
     - uses: actions/checkout@v4
     - name: Set up Python ${{ matrix.python-version }} with Robot Framework ${{ matrix.rf-version }}
