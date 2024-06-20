@@ -86,6 +86,6 @@ jobs:
       uses: actions/upload-artifact@v1
       with:
           name: report
-          path: report.html    
+          path: ${{ github.repository }}  
    
  
