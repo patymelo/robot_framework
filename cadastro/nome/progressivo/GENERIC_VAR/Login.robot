@@ -59,10 +59,11 @@ O usuario possui acesso ao NoMe como RIOBM
     Run Keyword And Ignore Error    Handle Alert
 O usuario possui acesso ao NoMe como CETIP
     Define URL
-    Open Browser    ${URL}  ${BROWSER}
-    ...   options=add_argument("--headless");add_argument("--ignore-certificate-errors");
-    Set Browser Implicit Wait       15s
-    Maximize Browser Window
+    ${chrome_options}=  Evaluate  sys.modules['selenium.webdriver'].ChromeOptions()  sys, selenium.webdriver
+    Call Method    ${chrome_options}    add_argument    --no-sandbox
+    Call Method    ${chrome_options}    add_argument    --disable-extensions
+    Create Webdriver    Chrome    chrome_options=${chrome_options}
+    Go To    ${URL}
 
     Select Frame                    id:main
     Input Text                      id:e1           ${PARTICIPANTE_CETIP}
