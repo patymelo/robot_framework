@@ -1,1 +1,15 @@
-
+user_data:
+    participante_itaubm: ITAUBM
+    participante_cetip: CETIP
+    participante_riobm: RIOBM
+    participante_lemebm: LEMEBM
+    participante_safrabm: SAFRABM
+    riobm:
+      login: ROBOT
+      password: TROCAR
+    itaubm:
+      login: ROBOT
+      password: TROCAR
+    cetip:
+      login: ROBOT
+      password: TROCAR
