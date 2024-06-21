@@ -19,20 +19,10 @@ jobs:
         #browser: [firefox, chrome, headlesschrome]  #edge
         browser: [chrome]  #edge
     steps:
-    - name: Install Dev Proxy
-      run: bash -c "$(curl -sL https://aka.ms/devproxy/setup.sh)"
-    - name: Run Dev Proxy
-      run: ./devproxy/devproxy &
-    - name: Install the Dev Proxy's certificate
+    - name: Install the Dev Proxy certificate
       timeout-minutes: 1
       run: |
-          echo "Finding certificate..."
-          security find-certificate -c "Dev Proxy CA" -a -p > dev-proxy-ca.pem
-
-          echo "Trusting certificate..."
-          sudo security add-trusted-cert -d -r trustRoot -k /Library/Keychains/System.keychain dev-proxy-ca.pem
-          echo "Certificate trusted."
-
+       
           # Set the system proxy settings (optional)
           echo "http_proxyhttp://CORPORATE%5Cp-pamelo:HappyDay#24@prxcor00801p.intraservice.corp:8080" >> $GITHUB_ENV
 
