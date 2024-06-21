@@ -94,12 +94,11 @@ jobs:
       with:
          name: report
          path: ./cadastro/nome/progressivo/CADBLC-1764/Resultados/NaoGeraEvento
-    - name: Test Summary
-      if: always()
-      id: test_summary
-      uses: test-summary/action@v2
+    - name: Create test summary
+      uses: test-summary/action@dist
       with:
-        paths: ./cadastro/nome/progressivo/CADBLC-1764/Resultados/NaoGeraEvento/output.xml
+        paths: Resultados/**/*.xml
+        if: always()
     - name: Add Lines of Code Summary
       if: always()
       run: echo "${{ steps.loc.outputs.lines-of-code-summary }}" >> $GITHUB_STEP_SUMMARY
