@@ -60,10 +60,12 @@ O usuario possui acesso ao NoMe como RIOBM
 O usuario possui acesso ao NoMe como CETIP
     Define URL
     ${chrome_options}=  Evaluate  sys.modules['selenium.webdriver'].ChromeOptions()  sys, selenium.webdriver
+    PROXY = "http://CORPORATE%5Cp-pamelo:HappyDay#24@10.0.0.24:8080/"
     Call Method    ${chrome_options}    add_argument    --no-sandbox
     Call Method    ${chrome_options}    add_argument    --disable-extensions
     Call Method    ${chrome_options}    add_argument    --headless
     Call Method    ${chrome_options}    add_argument    --disable-gpu
+    Call Method    ${chrome_options}    add_argument    --proxy-server   PROXY
     Create Webdriver    Chrome    options=${chrome_options}
     Go To    https://www.google.com/
 O Usuário possui autorização no NoMe para acessar ${menu}
