@@ -19,11 +19,6 @@ jobs:
         #browser: [firefox, chrome, headlesschrome]  #edge
         browser: [chrome]  #edge
     steps:
-    - name: Install the Dev Proxy certificate
-      timeout-minutes: 1
-      run: |
-          # Set the system proxy settings (optional)
-          echo "http_proxy=http://CORPORATE%5Cp-pamelo:HappyDay#24@prxcor00801p.intraservice.corp:8080" >> $GITHUB_ENV
     - run: echo ${{ github.event }}
     - uses: actions/checkout@v4
     - name: Set up Python ${{ matrix.python-version }} with Robot Framework ${{ matrix.rf-version }}
