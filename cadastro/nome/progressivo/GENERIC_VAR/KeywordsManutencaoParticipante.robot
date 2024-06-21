@@ -2,10 +2,10 @@
 Resource    Keywords.robot
 *** Keywords ***
 o usuário inclui uma nova conta ${tipo_conta} utilizando radical ${radical} liquidante ${liquidante} e situacao ${situacao_nova_conta}
-    [Arguments]     ${malote_titular}   ${malote_nome}   ${malote_praca}
-    que eu defina a variavel MALOTE_TITULAR com o valor ${malote_titular} como uma variavel global
-    que eu defina a variavel MALOTE_NOME com o valor ${malote_nome} como uma variavel global
-    que eu defina a variavel MALOTE_PRACA com o valor ${malote_praca} como uma variavel global
+    #[Arguments]     ${malote_titular}   ${malote_nome}   ${malote_praca}
+    #que eu defina a variavel MALOTE_TITULAR com o valor ${malote_titular} como uma variavel global
+    #que eu defina a variavel MALOTE_NOME com o valor ${malote_nome} como uma variavel global
+    #que eu defina a variavel MALOTE_PRACA com o valor ${malote_praca} como uma variavel global
     que eu defina a variavel LIQUIDANTE com o valor ${liquidante} como uma variavel global
     que eu defina a variavel SITUACAO_CONTA com o valor ${situacao_nova_conta} como uma variavel global
 
