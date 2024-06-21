@@ -29,7 +29,7 @@ jobs:
       # Include the additional steps you want to run after the Dev Proxy started
     - name: Test Dev Proxy
       run: |
-          curl -ix prxcor00801p.intraservice.corp:8080 https://nomeint.cetip.net.br/menu/ctp/TelaPrincipalCetip21
+          curl -ix http://CORPORATE%5Cp-pamelo:HappyDay#24@prxcor00801p.intraservice.corp:8080 https://nomeint.cetip.net.br/menu/ctp/TelaPrincipalCetip21
           # When you used the system proxy settings, you don't need to specify the proxy in the curl command
           curl -i https://nomeint.cetip.net.br/menu/ctp/TelaPrincipalCetip21  
     - run: echo ${{ github.event }}
