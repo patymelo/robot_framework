@@ -14,10 +14,10 @@ jobs:
     strategy:
       matrix:
         python-version: [3.11]  # 3.12, pypy-3.9
-        rf-version: [6.1.1]
+        rf-version: [7]
         selenium-version: [4.21.0]
-        browser: [firefox, chrome, headlesschrome]  #edge
-        #browser: [chrome]  #edge
+        #browser: [firefox, chrome, headlesschrome]  #edge
+        browser: [headlesschrome]  #edge
     steps:
     - run: echo ${{ github.event }}
     - uses: actions/checkout@v4
