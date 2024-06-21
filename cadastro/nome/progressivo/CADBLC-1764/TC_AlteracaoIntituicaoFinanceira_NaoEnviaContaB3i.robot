@@ -21,22 +21,10 @@ ${var_amb}=                         qaa
 *** Test Cases ***
 TST0001: Realizar alteração em vários campos dos dados do participante sem alterar a razão social
     [Tags]    PROGRESSIVO_FILA_EVENTO_PARTICIPANTE_NAO_GERA_EVENTO
-    Abrir o navegador e acessar o site Organo
-    Preencher os campos do formulário
+    O usuario possui acesso ao NoMe como CETIP
 
 *** Keywords ***
 configuracao inicial
     Delete Directory If Exists    ${DIRETORIO_IMAGENS}
-Abrir o navegador e acessar o site Organo
-    ${URL}=   Set Variable    https://www.google.com/
-    ${chrome_options}=  Evaluate  sys.modules['selenium.webdriver'].ChromeOptions()  sys, selenium.webdriver
-    Call Method    ${chrome_options}    add_argument    --no-sandbox
-    Call Method    ${chrome_options}    add_argument    --disable-extensions
-    Call Method    ${chrome_options}    add_argument    --headless
-    Call Method    ${chrome_options}    add_argument    --disable-gpu
-    Create Webdriver    Chrome    options=${chrome_options}
-    Go To    ${URL}
-Preencher os campos do formulário
-    Input Text       id:APjFqb       robot framework
 que o teste seja concluido com sucesso
     Log     Teste Finalizado com Sucesso!
