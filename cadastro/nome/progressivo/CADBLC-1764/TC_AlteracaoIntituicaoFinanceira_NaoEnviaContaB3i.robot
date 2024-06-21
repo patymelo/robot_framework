@@ -6,9 +6,9 @@ Documentation       Realizando a manutenção de vários dados cadastrais
 ...                 ** ATENÇÃO **:
 ...                 O CNPJ deve ser um participante existente e que não tenha gerado
 ...                 nenhum evento na fila utilizando a data de execução desse script.
-Resource            cadastro/nome/progressivo/GENERIC_VAR/Keywords.robot
-Resource            cadastro/nome/progressivo/GENERIC_VAR/Login.robot
-Resource            cadastro/nome/progressivo/GENERIC_VAR/KeywordsManutencaoParticipante.robot
+Resource            ${CURDIR}/../GENERIC_VAR/Keywords.robot
+Resource            ${CURDIR}/../GENERIC_VAR/Login.robot
+Resource            ${CURDIR}/../GENERIC_VAR/KeywordsManutencaoParticipante.robot
 Resource            ${CURDIR}/../GENERIC_VAR/keywordConsultaBD.robot
 Suite Setup         configuracao inicial
 Test Teardown       Close Browser
