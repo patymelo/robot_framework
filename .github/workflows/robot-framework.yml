@@ -65,7 +65,7 @@ jobs:
         pip install -U --pre robotframework==${{ matrix.rf-version }}
     - name: Install unicode
       run: |    
-        !sudo pip install unidecode
+        pip install Unidecode
     - name: Install drivers via selenium-manager
       run: |
         if [[ ${{ matrix.selenium-version }} == '4.20.0' || ${{ matrix.selenium-version }} == '4.21.0' ]]; then
@@ -99,8 +99,7 @@ jobs:
       id: test_summary
       uses: test-summary/action@v2
       with:
-        paths: ./cadastro/nome/progressivo/CADBLC-1764/Resultados/NaoGeraEvento/*.xml
-        if: always()
+        paths: ./cadastro/nome/progressivo/CADBLC-1764/Resultados/NaoGeraEvento/output.xml
     - name: Add Lines of Code Summary
       if: always()
       run: echo "${{ steps.loc.outputs.lines-of-code-summary }}" >> $GITHUB_STEP_SUMMARY
