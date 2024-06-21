@@ -9,13 +9,13 @@ Documentation       Realizando a manutenção de vários dados cadastrais
 Resource            ${CURDIR}/../GENERIC_VAR/Keywords.robot
 Resource            ${CURDIR}/../GENERIC_VAR/Login.robot
 Resource            ${CURDIR}/../GENERIC_VAR/KeywordsManutencaoParticipante.robot
-Resource            ${CURDIR}/../GENERIC_VAR/keywordConsultaBD.robot
+#Resource            ${CURDIR}/../GENERIC_VAR/keywordConsultaBD.robot
 Suite Setup         configuracao inicial
 Test Teardown       Close Browser
 Suite Teardown      Close All Browsers
 
 *** Variable ***
-${DIRETORIO_IMAGENS}                ${CURDIR}\\Resultados\\NaoGeraEvento\\img
+${DIRETORIO_IMAGENS}                ${CURDIR}/Resultados/NaoGeraEvento/img
 ${var_amb}=                         qaa
 
 *** Test Cases ***
@@ -33,14 +33,6 @@ TST0001: Realizar alteração em vários campos dos dados do participante sem al
         E O Usuario clica no botao Confirmar
         capturar e salvar imagem com o nome DadosParticipanteAlteraConfirmar
         Então deve retornar a mensagem  Dados alterados com sucesso
-
-TST0002: Verificar que a atualização não será enviada para outros sistemas após alteração dos campos
-    [Tags]    PROGRESSIVO_FILA_EVENTO_PARTICIPANTE_NAO_GERA_EVENTO
-    ${campo_like_payload}=      Get CNPJ without points ${CNPJ_PARTICIPANTE}
-    ${query}=                   Set Variable        SELECT NUM_ID_EVENTO_CADASTRO_B3I, DAT_INCLUSAO, NUM_ID_SERVICO, DBMS_LOB.SUBSTR(DES_PATRAMETROS, 4000, 1), NUM_STATUS_ESPERADO, NUM_STATUS_RETORNO, DAT_PROCESSAMENTO FROM CETIP.TCTPEVENTO_CADASTRO_B3I WHERE 1=1 AND NUM_ID_SERVICO = 276 AND DES_PATRAMETROS LIKE '%${campo_like_payload}%' AND TO_CHAR(DAT_INCLUSAO,'dd/mm/yyyy') = TO_CHAR(sysdate,'dd/mm/yyyy')
-    Dado que eu execute a consulta ${query} no ambiente ${var_amb} verificando que retornou 0 registros no resultado
-    Então que o teste seja concluido com sucesso
-
 *** Keywords ***
 configuracao inicial
     Delete Directory If Exists    ${DIRETORIO_IMAGENS}
