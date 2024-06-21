@@ -63,7 +63,7 @@ O usuario possui acesso ao NoMe como CETIP
     Call Method    ${chrome_options}    add_argument    --no-sandbox
     Call Method    ${chrome_options}    add_argument    --disable-extensions
     Call Method    ${chrome_options}    add_argument    --headless
-    Create Webdriver    Chrome    chrome_options=${chrome_options}
+    Create Webdriver    Chrome    options=${chrome_options}
     Go To    ${URL}
 
     Select Frame                    id:main
