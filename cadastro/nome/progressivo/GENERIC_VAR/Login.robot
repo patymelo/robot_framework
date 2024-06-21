@@ -62,6 +62,7 @@ O usuario possui acesso ao NoMe como CETIP
     ${chrome_options}=  Evaluate  sys.modules['selenium.webdriver'].ChromeOptions()  sys, selenium.webdriver
     Call Method    ${chrome_options}    add_argument    --no-sandbox
     Call Method    ${chrome_options}    add_argument    --disable-extensions
+    Call Method    ${chrome_options}    add_argument    --headless
     Create Webdriver    Chrome    chrome_options=${chrome_options}
     Go To    ${URL}
 
