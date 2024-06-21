@@ -91,5 +91,18 @@ jobs:
       with:
          name: report
          path: ./cadastro/nome/progressivo/CADBLC-1764/Resultados/NaoGeraEvento
-
+   generate_report:
+     if: always()
+     runs-on: ubuntu-latest
+     steps:
+      - uses: actions/checkout@v2
+      - name: Download reports
+        uses: actions/download-artifact@v1
+        with:
+          name: reports
+          report_path: ./cadastro/nome/progressivo/CADBLC-1764/Resultados/NaoGeraEvento
+      - name: Send report to commit
+        uses: joonvena/robotframework-reporter-action@v2.4
+        with:
+         gh_access_token: ${{ secrets.GITHUB_TOKEN }}
  
