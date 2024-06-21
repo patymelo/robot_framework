@@ -1,6 +1,6 @@
 *** Settings ***
-Resource       ${CURDIR}\\Variables\\main.resource
-Variables      ${CURDIR}\\Variables\\test_data.yaml
+Resource       ${CURDIR}/Variables/main.resource
+Variables      ${CURDIR}/Variables/test_data.yaml
 *** Variables ***
 ${currentDate}         currentDate
 ${randonDate}          randonDate
