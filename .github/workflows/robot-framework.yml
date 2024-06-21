@@ -14,7 +14,7 @@ jobs:
     strategy:
       matrix:
         python-version: [3.11]  # 3.12, pypy-3.9
-        rf-version: [7]
+        rf-version: [6.1.1]
         selenium-version: [4.21.0]
         #browser: [firefox, chrome, headlesschrome]  #edge
         browser: [chrome]  #edge
@@ -71,12 +71,12 @@ jobs:
       uses: actions/upload-artifact@v4
       if: always()
       with:
-         name: report
+         name: reportRobotFramework
          path: ./cadastro/nome/progressivo/CADBLC-1764/Resultados/NaoGeraEvento
     - name: Create test summary
       uses: test-summary/action@dist
       with:
-        paths: Resultados/**/*.xml
+        paths: ./cadastro/nome/progressivo/CADBLC-1764/Resultados//**/*.xml
         if: always()
     - name: Add Lines of Code Summary
       if: always()
