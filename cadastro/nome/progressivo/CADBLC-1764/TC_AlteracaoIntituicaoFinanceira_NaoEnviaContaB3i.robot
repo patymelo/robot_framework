@@ -9,7 +9,7 @@ Documentation       Realizando a manutenção de vários dados cadastrais
 Resource            cadastro/nome/progressivo/GENERIC_VAR/Keywords.robot
 Resource            cadastro/nome/progressivo/GENERIC_VAR/Login.robot
 Resource            cadastro/nome/progressivo/GENERIC_VAR/KeywordsManutencaoParticipante.robot
-Resource            ${CURDIR}\\..\\GENERIC_VAR\\keywordConsultaBD.robot
+Resource            ${CURDIR}/../GENERIC_VAR/keywordConsultaBD.robot
 Suite Setup         configuracao inicial
 Test Teardown       Close Browser
 Suite Teardown      Close All Browsers
