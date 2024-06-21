@@ -1,6 +1,6 @@
 *** Settings ***
-Variables      ${CURDIR}\\Variables\\test_data.yaml
-Variables      ${CURDIR}\\Variables\\users.yaml
+Variables      ${CURDIR}/Variables/test_data.yaml
+Variables      ${CURDIR}/Variables/users.yaml
 
 *** Variables ***
 ${NOME_URL_LOCAL}           ${url.dev}
