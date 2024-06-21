@@ -65,7 +65,7 @@ jobs:
         pip install -U --pre robotframework==${{ matrix.rf-version }}
     - name: Install unicode
       run: |    
-        !pip install unidecode
+        !sudo pip install unidecode
     - name: Install drivers via selenium-manager
       run: |
         if [[ ${{ matrix.selenium-version }} == '4.20.0' || ${{ matrix.selenium-version }} == '4.21.0' ]]; then
