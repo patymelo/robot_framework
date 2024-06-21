@@ -14,25 +14,26 @@ Suite Setup         configuracao inicial
 Test Teardown       Close Browser
 Suite Teardown      Close All Browsers
 
-*** Variable ***
+*** Variables ***
 ${DIRETORIO_IMAGENS}                ${CURDIR}/Resultados/NaoGeraEvento/img
 ${var_amb}=                         qaa
 
 *** Test Cases ***
 TST0001: Realizar alteração em vários campos dos dados do participante sem alterar a razão social
     [Tags]    PROGRESSIVO_FILA_EVENTO_PARTICIPANTE_NAO_GERA_EVENTO
-        Set Global Variable     ${TAG_NUMBER}               TST0001
-        Set Global Variable     ${CNPJ_PARTICIPANTE}        91.540.267/0001-27
-        Dado que o usuário realize login no sistema NoMe como interno B3
-        E o Usuario acessa o menu de Alteracao de Participante e faz a busca pelo CNPJ
-        E que seja acessado a ação DADOS DO PARTICIPANTE
-        E que seja alterado varios campos referente a tela Dados do Participante
-        E O Usuario justifica no campo Justificativa valor igual a Alterando varios campos do participante que não gera evento ao B3I
-        E O Usuario clica no botao Enviar
-        capturar e salvar imagem com o nome DadosParticipanteAlteraEnviar
-        E O Usuario clica no botao Confirmar
-        capturar e salvar imagem com o nome DadosParticipanteAlteraConfirmar
-        Então deve retornar a mensagem  Dados alterados com sucesso
+    Abrir o navegador e acessar o site Organo
+    ${URL}=   Set Variable    https://www.google.com/
+    ${chrome_options}=  Evaluate  sys.modules['selenium.webdriver'].ChromeOptions()  sys, selenium.webdriver
+    Call Method    ${chrome_options}    add_argument    --no-sandbox
+    Call Method    ${chrome_options}    add_argument    --disable-extensions
+    Call Method    ${chrome_options}    add_argument    --headless
+    Call Method    ${chrome_options}    add_argument    --disable-gpu
+    Create Webdriver    Chrome    chrome_options=${chrome_options}
+    Create Webdriver    Chrome    options=${chrome_options}
+    Go To    ${URL}
+Preencher os campos do formulário
+    Input Text       id:APjFqb       robot framework
+
 *** Keywords ***
 configuracao inicial
     Delete Directory If Exists    ${DIRETORIO_IMAGENS}
