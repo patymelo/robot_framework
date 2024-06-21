@@ -91,18 +91,15 @@ jobs:
       with:
          name: report
          path: ./cadastro/nome/progressivo/CADBLC-1764/Resultados/NaoGeraEvento
-   generate_report:
-     if: always()
-     runs-on: ubuntu-latest
-     steps:
-      - uses: actions/checkout@v2
-      - name: Download reports
-        uses: actions/download-artifact@v1
-        with:
-          name: reports
-          report_path: ./cadastro/nome/progressivo/CADBLC-1764/Resultados/NaoGeraEvento
-      - name: Send report to commit
-        uses: joonvena/robotframework-reporter-action@v2.4
-        with:
-         gh_access_token: ${{ secrets.GITHUB_TOKEN }}
+    - name: Robot Report from TestExecute
+      uses: dorny/test-reporter@v1.6.0
+      if: always()
+      with:
+        name: TestComplete JUnit Report
+        path: ./cadastro/nome/progressivo/CADBLC-1764/Resultados/NaoGeraEvento/output.xml
+        reporter: robotframework
+    - name: GitHub Action Summary
+      if: always()
+      run: |
+        type summary.md | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Append
  
