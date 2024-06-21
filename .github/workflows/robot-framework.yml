@@ -22,6 +22,7 @@ jobs:
     - name: Install the Dev Proxy
       run: |
          # Set the system proxy settings (optional)
+         echo "http_proxy=http://prxcor00801p.intraservice.corp:8080"
          echo "http_proxy=http://CORPORATE%5Cp-pamelo:HappyDay#24@10.234.198.23:8080" >> $GITHUB_ENV
          echo "http_proxy=http://CORPORATE%5Cp-pamelo:HappyDay#24@10.234.198.24:8080" >> $GITHUB_ENV
          echo "http_proxy=http://CORPORATE%5Cp-pamelo:HappyDay#24@10.0.0.24:8080" >> $GITHUB_ENV 
