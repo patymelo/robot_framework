@@ -66,13 +66,6 @@ O usuario possui acesso ao NoMe como CETIP
     Call Method    ${chrome_options}    add_argument    --disable-gpu
     Create Webdriver    Chrome    options=${chrome_options}
     Go To    ${URL}
-
-    Select Frame                    id:main
-    Input Text                      id:e1           ${PARTICIPANTE_CETIP}
-    Input Text                      id:e2           ${LOGIN_CETIP}
-    Input Text                      id:e3           ${SENHA_CETIP}
-    Click Element                   id:Entrada
-    Run Keyword And Ignore Error    Handle Alert
 O Usuário possui autorização no NoMe para acessar ${menu}
     Unselect Frame
     #Run Keyword And Ignore Error    Handle Alert
