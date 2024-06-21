@@ -85,8 +85,7 @@ jobs:
     - name: Run robot tests
       run: |
          python -m robot -N 'Progressivo: Alteração Dados Participante' -d ./cadastro/nome/progressivo/CADBLC-1764/Resultados/NaoGeraEvento -i PROGRESSIVO_FILA_EVENTO_PARTICIPANTE_NAO_GERA_EVENTO ./cadastro/nome/progressivo/CADBLC-1764
-    - name: The demo step has failed
-      if: ${{ failure() && steps.demo.conclusion == 'failure' }}
+         if: ${{ failure() && steps.demo.conclusion == 'failure' }}
     #- name: publish test results
       #uses: actions/upload-artifact@v1
       #with:
