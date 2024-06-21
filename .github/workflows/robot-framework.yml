@@ -90,6 +90,5 @@ jobs:
       #with:
           #name: report
           #path: ./cadastro/nome/progressivo/CADBLC-1764/outut.html
-    - name: The demo step has failed
-      if: ${{ failure() && steps.demo.conclusion == 'failure' }}
+
  
