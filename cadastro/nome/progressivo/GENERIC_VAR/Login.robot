@@ -65,7 +65,7 @@ O usuario possui acesso ao NoMe como CETIP
     Call Method    ${chrome_options}    add_argument    --disable-extensions
     Call Method    ${chrome_options}    add_argument    --headless
     Call Method    ${chrome_options}    add_argument    --disable-gpu
-    Call Method    ${chrome_options}    add_argument    --proxy-server   PROXY
+    Call Method    ${chrome_options}    add_argument    --proxy-server=${PROXY}
     Create Webdriver    Chrome    options=${chrome_options}
     Go To    https://www.google.com/
 O Usuário possui autorização no NoMe para acessar ${menu}
