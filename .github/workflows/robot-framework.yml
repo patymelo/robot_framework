@@ -97,12 +97,7 @@ jobs:
       with:
         paths: ./cadastro/nome/progressivo/CADBLC-1764/Resultados/NaoGeraEvento/*.xml
         if: always()
-    - name: Notify Slack
-      uses: slackapi/slack-github-action@v1.19.0
-      with:
-        payload: |-
-         {
-           "message": "${{ steps.test_summary.outputs.passed }}/${{ steps.test_summary.outputs.total }} tests passed"
-         }
-      if: always()
+    - name: Add Lines of Code Summary
+      run: echo "${{ steps.loc.outputs.lines-of-code-summary }}" >> $GITHUB_STEP_SUMMARY
+
     
