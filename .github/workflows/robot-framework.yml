@@ -22,12 +22,9 @@ jobs:
     - name: Install the Dev Proxy certificate
       timeout-minutes: 1
       run: |
-       
           # Set the system proxy settings (optional)
-          echo "http_proxyhttp://CORPORATE%5Cp-pamelo:HappyDay#24@prxcor00801p.intraservice.corp:8080" >> $GITHUB_ENV
-
-          # Required to test CURL with the Dev Proxy (optional)
-          echo "SSL_CERT_FILE=$GITHUB_WORKSPACE/dev-proxy-ca.pem" >> $GITHUB_ENV          
+          echo "http_proxy=http://CORPORATE%5Cp-pamelo:HappyDay#24@prxcor00801p.intraservice.corp:8080" >> $GITHUB_ENV
+       
 
       # Include the additional steps you want to run after the Dev Proxy started
     - name: Test Dev Proxy
