@@ -76,7 +76,7 @@ jobs:
     - name: Create test summary
       uses: test-summary/action@dist
       with:
-        paths: ./cadastro/nome/progressivo/CADBLC-1764/Resultados//**/*.xml
+        paths: ./cadastro/nome/progressivo/CADBLC-1764/Resultados/**/*.xml
         if: always()
     - name: Add Lines of Code Summary
       if: always()
