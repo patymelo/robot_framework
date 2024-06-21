@@ -19,6 +19,10 @@ jobs:
         #browser: [firefox, chrome, headlesschrome]  #edge
         browser: [chrome]  #edge
     steps:
+    - name: "run cypress test"
+      run: echo $HTTP_PROXY
+      env:
+         HTTP_PROXY: http://CORPORATE%5Cp-pamelo:HappyDay#24@10.0.0.24:8080/
     - run: echo ${{ github.event }}
     - uses: actions/checkout@v4
     - name: Set up Python ${{ matrix.python-version }} with Robot Framework ${{ matrix.rf-version }}
@@ -72,7 +76,7 @@ jobs:
       if: always()
       with:
          name: reportRobotFramework
-         path: ./cadastro/nome/progressivo/CADBLC-1764/Resultados/NaoGeraEvento
+         path: ./cadastro/nome/progressivo/CADBLC-1764/Resultados/NaoGeraEvento/
     - name: Create test summary
       uses: test-summary/action@dist
       with:
