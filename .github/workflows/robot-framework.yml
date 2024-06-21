@@ -19,14 +19,32 @@ jobs:
         #browser: [firefox, chrome, headlesschrome]  #edge
         browser: [chrome]  #edge
     steps:
-    - name: Install the Dev Proxy
+    - name: Install Dev Proxy
+      run: bash -c "$(curl -sL https://aka.ms/devproxy/setup.sh)"
+    - name: Run Dev Proxy
+      run: ./devproxy/devproxy &
+    - name: Install the Dev Proxy's certificate
+      timeout-minutes: 1
       run: |
-         # Set the system proxy settings (optional)
-         echo "http_proxy=http://prxcor00801p.intraservice.corp:8080"
-         echo "http_proxy=http://CORPORATE%5Cp-pamelo:HappyDay#24@10.234.198.23:8080" >> $GITHUB_ENV
-         echo "http_proxy=http://CORPORATE%5Cp-pamelo:HappyDay#24@10.234.198.24:8080" >> $GITHUB_ENV
-         echo "http_proxy=http://CORPORATE%5Cp-pamelo:HappyDay#24@10.0.0.24:8080" >> $GITHUB_ENV 
-         echo "http_proxy=http://CORPORATE%5Cp-pamelo:HappyDay#24@10.234.198.25:8080" >> $GITHUB_ENV 
+          echo "Finding certificate..."
+          security find-certificate -c "Dev Proxy CA" -a -p > dev-proxy-ca.pem
+
+          echo "Trusting certificate..."
+          sudo security add-trusted-cert -d -r trustRoot -k /Library/Keychains/System.keychain dev-proxy-ca.pem
+          echo "Certificate trusted."
+
+          # Set the system proxy settings (optional)
+          echo "http_proxyhttp://CORPORATE%5Cp-pamelo:HappyDay#24@prxcor00801p.intraservice.corp:8080" >> $GITHUB_ENV
+
+          # Required to test CURL with the Dev Proxy (optional)
+          echo "SSL_CERT_FILE=$GITHUB_WORKSPACE/dev-proxy-ca.pem" >> $GITHUB_ENV          
+
+      # Include the additional steps you want to run after the Dev Proxy started
+    - name: Test Dev Proxy
+      run: |
+          curl -ix prxcor00801p.intraservice.corp:8080 https://nomeint.cetip.net.br/menu/ctp/TelaPrincipalCetip21
+          # When you used the system proxy settings, you don't need to specify the proxy in the curl command
+          curl -i https://nomeint.cetip.net.br/menu/ctp/TelaPrincipalCetip21  
     - run: echo ${{ github.event }}
     - uses: actions/checkout@v4
     - name: Set up Python ${{ matrix.python-version }} with Robot Framework ${{ matrix.rf-version }}
